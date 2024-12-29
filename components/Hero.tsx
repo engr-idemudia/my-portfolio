@@ -42,7 +42,9 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
+            {/* Hi! I&apos;m Idemudia, a Web Developer that you need 👍🏼.  */}
+            Hello! My name is Idemudia, and I am a skilled Web Developer ready
+            to meet your needs. 👍🏼
           </p>
 
           <a href="#about">

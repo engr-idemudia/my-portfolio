@@ -1,23 +1,15 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import { ThemeProvider } from "next-themes";
+import { Inter } from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import "./globals.css";
+import { ThemeProvider } from "./provider";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My Dev Portfolio",
+  title: "Idemudia's Portfolio",
   description:
-    "A modern and visually captivating portfolio combining Next.js, Framer Motion, and Three.js. It features smooth animations, SEO optimization, and interactive 3D elements to showcase projects and skills in a professional yet creative manner, offering a unique and engaging user experience.",
+    "A modern Next.js portfolio with Framer Motion animations, showcasing projects and skills in a sleek, responsive, and SEO-optimized design.",
 };
 
 export default function RootLayout({
@@ -26,10 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/id-logo.png" sizes="any" />
+      </head>
+      <body className={inter.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
