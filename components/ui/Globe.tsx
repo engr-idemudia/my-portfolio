@@ -263,7 +263,7 @@ export function World(props: WorldProps) {
         position={new Vector3(-200, 500, 200)}
         intensity={0.8}
       />
-      <Globe {...props} />
+      {/* <Globe {...props} /> */}
       <OrbitControls
         enablePan={false}
         enableZoom={false}
