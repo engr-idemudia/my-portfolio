@@ -2,9 +2,6 @@ import { withSentryConfig } from "@sentry/nextjs";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  typescript: {
-    ignoreBuildErrors: true,
-  },
 };
 
 export default withSentryConfig(
@@ -46,6 +43,7 @@ export default withSentryConfig(
       // https://docs.sentry.io/product/crons/
       // https://vercel.com/docs/cron-jobs
       automaticVercelMonitors: true,
+      deleteSourceMapsAfterUpload: true,
     }
   ),
   {
@@ -86,5 +84,6 @@ export default withSentryConfig(
     // https://docs.sentry.io/product/crons/
     // https://vercel.com/docs/cron-jobs
     automaticVercelMonitors: true,
+    deleteSourceMapsAfterUpload: true,
   }
 );
