@@ -29,7 +29,7 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
+    title: "Some tech stack",
     description: "I constantly try to improve",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -78,6 +78,7 @@ export const projects = [
     img: "/p1.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "/ui.earth.com",
+    // link: "https://github.com/engr-idemudia/Meal-Tracker-App",
   },
   {
     id: 2,
@@ -85,7 +86,8 @@ export const projects = [
     des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
     img: "/p2.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    link: "/ui.earth.com",
+    // link: "https://github.com/engr-idemudia/check-out-facts-today",
   },
   {
     id: 3,
@@ -93,7 +95,8 @@ export const projects = [
     des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    link: "/ui.earth.com",
+    // link: "https://github.com/engr-idemudia/Robofriends",
   },
   {
     id: 4,
@@ -101,40 +104,44 @@ export const projects = [
     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
     img: "/p4.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    link: "/ui.earth.com",
+    // link: "https://github.com/engr-idemudia/Location_Time_Tracker",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Proven Expertise in Secure System Design and Development: Under my supervision for his 2023 BSc thesis, Idemudia demonstrated strong technical skills in system architecture, security, and problem-solving. His project on secure distributed data collection in healthcare showcased his proficiency, dedication, and ability to integrate feedback effectively. He stands out as a highly capable professional with a proactive mindset and innovative approach. Idemudia is well-prepared to excel in IT roles that demand technical expertise, problem-solving, and secure system development.",
+    name: "Aleksandr Kormiltsyn ",
+    title:
+      "Lecturer; The Estonian Entrepreneurship University of Applied Sciences",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Reliable and Results-Driven Professional: Having worked with Idemudia on several projects, I can confidently say that he is a results-driven developer who delivers high-quality applications on time. His problem-solving skills and deep understanding of backend and frontend technologies enable him to create seamless, user-friendly experiences. His dedication to continuous learning ensures he stays ahead of industry trends, making him a top choice for any software development role.",
+    name: "Roop Ranjan Khan",
+    title: "IT Application Engineer at Kuehne+Nagel",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Collaborating with Idemudia was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Idemudia's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Idemudia is the ideal partner. Idemudia's enthusiasm for every facet of development truly stands out.",
+    // name: "Raphae Akpan",
+    // title: "Senior Software Engineer at Wrapbook",
+    name: "Basil Akpan",
+    title: "Senior Software Engineer at Solita",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "An Innovator with a Problem-Solving Mindset: Beyond his technical expertise, Idemudia is an excellent communicator who works well with teams and stakeholders. He actively participates in discussions, provides insightful suggestions, and ensures that projects align with business goals. His positive attitude and willingness to mentor others make him a great addition to any development team looking for skill and leadership.",
+    name: "Maruf Hossen",
+    title: "Founder at revorium",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Reliable and Results-Driven Professional: Idemudia professionalism, promptness, and dedication to delivering exceptional results stood out. His enthusiasm for development and teamwork contributed significantly to our project's success. During his time at Swappie, he showcased outstanding performance and a strong ability to collaborate effectively. Idemudia’s skills, passion, and work ethic make him a valuable asset to any team. I am confident he will excel in his role and strongly recommend him. Feel free to reach out for more details.",
+    name: "Shaibu Kabiru",
+    title: "Process Lead, Swappie.com 'kabiru.shaibu@swappie.com'",
   },
 ];
 
@@ -181,22 +188,22 @@ export const workExperience = [
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
-  },
-  {
-    id: 3,
     title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    desc: "Assisted to the developement of Full-fledged applications from initial concept to deployment",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
+    id: 3,
+    title: "Agile Development Bootcamp",
+    desc: "Collaborated on developing Web-Apps by contributing to UI design and database schema; participated in code reviews, debugging, and Agile practices, including CI/CD, API testing, and sprint grooming; ranked among the top 16 of 97 in code screening",
+    className: "md:col-span-2", // change to md:col-span-2
+    thumbnail: "/exp2.svg",
+  },
+  {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "IT-Support/Maintenance Engineer",
+    desc: "Led electrical/electronics and tech maintenance, performing system upgrades, software updates, preventive maintenance, vulnerability assessments, and cross-team collaboration for integrated support.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
@@ -206,13 +213,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/engr-idemudia", // GitHub URL
   },
   {
     id: 2,
     img: "/twit.svg",
+    link: "https://x.com/maximudia", // GitHub URL
   },
   {
     id: 3,
     img: "/link.svg",
+    link: "https://www.linkedin.com/in/engr-idemudia/", // GitHub URL
   },
 ];
