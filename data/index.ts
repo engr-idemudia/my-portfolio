@@ -81,7 +81,7 @@ export const projects = [
     img: "/p1.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/app.svg", "/c.svg"],
     // TODO: Replace with the actual GitHub repo URL for your Banking App
-    link: "https://github.com/engr-idemudia",
+    link: "https://github.com/engr-idemudia/NextBank",
   },
   {
     id: 2,
@@ -100,7 +100,7 @@ export const projects = [
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     // TODO: Replace with GitHub repo URL if the thesis project is public, otherwise link to your main GitHub
-    link: "https://github.com/engr-idemudia",
+    link: "https://github.com/engr-idemudia/saas-translator-app",
   },
   {
     id: 4,
