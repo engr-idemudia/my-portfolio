@@ -88,7 +88,7 @@ export const projects = [
     // ✅ REAL PROJECT: TalTech Kindergarten Application (team project)
     title: "Multi-Tenant Kindergarten Management System",
     des: "A role-based school management platform for admins, teachers, and parents. Features a full REST API backend (Spring Boot, Java), React/TypeScript frontend with MUI, JWT authentication, and PostgreSQL — developed in a team of 6 using Agile practices.",
-    img: "/p2.svg",
+    img: "/p2.jpg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
     link: "https://github.com/taltech-vanemarendajaks/team29-kindergarten-application",
   },
@@ -104,12 +104,11 @@ export const projects = [
   },
   {
     id: 4,
-    // ✅ REAL PROJECT: Location & Time Tracker (your existing GitHub project)
-    title: "Location & Time Tracker",
-    des: "A real-time location and session time tracking application with an interactive UI and backend integration, built with React and Node.js.",
+    title: "Meal Tracker Application",
+    des: "A full-stack backend application built with AdonisJS and MySQL. Features user authentication, meal tracking with calorie analysis, paginated meal history, reporting over time periods, and multi-language support including English, French, and Estonian.",
     img: "/p4.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
-    link: "https://github.com/engr-idemudia/Location_Time_Tracker",
+    link: "https://github.com/engr-idemudia/Meal-Tracker-App",
   },
 ];
 
