@@ -14,10 +14,8 @@ const Approach = () => {
         {/* add des prop */}
         <Card
           title="Planning & Strategy"
-          icon={<AceternityIcon order="Hover-Me" />}
-          des="We'll collaborate to map out your website's goals, target audience, 
-          and key functionalities. We'll discuss things like site structure, 
-          navigation, and content requirements."
+          icon={<AceternityIcon order="Phase 1" />}
+          des="Every project starts with understanding the problem. I work with stakeholders to define requirements, map system architecture, and plan a clean, scalable solution before writing a single line of code."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -26,10 +24,8 @@ const Approach = () => {
         </Card>
         <Card
           title="Development & Progress Update"
-          icon={<AceternityIcon order="Hover-Me!" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
+          icon={<AceternityIcon order="Phase 2" />}
+          des="I build iteratively, writing clean and well-structured code with regular progress updates. I follow best practices including code reviews, version control, and testing throughout the development cycle."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -45,10 +41,8 @@ const Approach = () => {
         </Card>
         <Card
           title="Development & Launch"
-          icon={<AceternityIcon order="Hover-Me!!" />}
-          des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
+          icon={<AceternityIcon order="Phase 3" />}
+          des="Once the build is stable and tested, I handle deployment, documentation, and handover. I ensure the final product is secure, performant, and maintainable for the long term."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -149,6 +143,9 @@ const AceternityIcon = ({ order }: { order: string }) => {
         justify-center rounded-full bg-slate-950 px-5 py-2 text-purple backdrop-blur-3xl font-bold text-2xl"
         >
           {order}
+        </span>
+        <span className="block text-center text-white/50 text-xs mt-2 tracking-widest uppercase">
+          hover to explore
         </span>
       </button>
     </div>
