@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Idemudia's Portfolio",
   description:
-    "A modern Next.js portfolio with Framer Motion animations, showcasing projects and skills in a sleek, responsive, and SEO-optimized design.",
+    "A modern Next.js portfolio with Framer Motion animations, showcasing projects and skills in a sleek, responsive and SEO-optimized design.",
 };
 
 export default function RootLayout({
