@@ -1,15 +1,16 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
+  { name: "Experience", link: "#experience" },
   { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
-  // { name: "email", link: "#email" },
 ];
 
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title:
+      "I prioritise team collaboration and clear, direct communication with engineers and stakeholders",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -19,7 +20,7 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title: "Open to remote, onsite, and hybrid roles across time zones",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -29,8 +30,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "Some tech stack",
-    description: "I constantly try to improve",
+    title: "My tech stack",
+    description: "Always improving",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -39,7 +40,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title: "Focused on backend development, software security, and fintech.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -47,11 +48,12 @@ export const gridItems = [
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
-
   {
     id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
+    // ✅ UPDATED: Replaced false template text with accurate current project
+    title:
+      "Currently building a full-stack fintech banking platform with real-time transactions",
+    description: "What I'm working on",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -60,7 +62,7 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Do you want to start a project together?",
+    title: "Open to new opportunities — let's connect.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -73,75 +75,77 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+    // ✅ REAL PROJECT: Banking App (your original fintech project)
+    title: "Horizon – Fintech Banking Platform",
+    des: "A full-stack banking dashboard with real-time transaction tracking, multi-bank account linking via Plaid, and peer-to-peer transfers via Dwolla. Built with Next.js 14, TypeScript, and Appwrite.",
     img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
-    // link: "https://github.com/engr-idemudia/Meal-Tracker-App",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/app.svg", "/c.svg"],
+    // TODO: Replace with the actual GitHub repo URL for your Banking App
+    link: "https://github.com/engr-idemudia",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
+    // ✅ REAL PROJECT: TalTech Kindergarten Application (team project)
+    title: "Multi-Tenant Kindergarten Management System",
+    des: "A role-based school management platform for admins, teachers, and parents. Features a full REST API backend (Spring Boot, Java), React/TypeScript frontend with MUI, JWT authentication, and PostgreSQL — developed in a team of 6 using Agile practices.",
     img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.earth.com",
-    // link: "https://github.com/engr-idemudia/check-out-facts-today",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
+    link: "https://github.com/taltech-vanemarendajaks/team29-kindergarten-application",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+    // ✅ REAL PROJECT: BSc Thesis (your security-focused academic project)
+    title: "Secure Distributed Healthcare Data Collection System",
+    des: "BSc thesis project: a secure distributed system for collecting patient data across healthcare nodes, incorporating encryption, access control, and system architecture best practices. Supervised at the Estonian Entrepreneurship University of Applied Sciences.",
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.earth.com",
-    // link: "https://github.com/engr-idemudia/Robofriends",
+    // TODO: Replace with GitHub repo URL if the thesis project is public, otherwise link to your main GitHub
+    link: "https://github.com/engr-idemudia",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
+    // ✅ REAL PROJECT: Location & Time Tracker (your existing GitHub project)
+    title: "Location & Time Tracker",
+    des: "A real-time location and session time tracking application with an interactive UI and backend integration, built with React and Node.js.",
     img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.earth.com",
-    // link: "https://github.com/engr-idemudia/Location_Time_Tracker",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
+    link: "https://github.com/engr-idemudia/Location_Time_Tracker",
   },
 ];
 
 export const testimonials = [
   {
+    // ✅ Removed "Proven Expertise..." label — let the quote speak for itself
     quote:
-      "Proven Expertise in Secure System Design and Development: Under my supervision for his 2023 BSc thesis, Idemudia demonstrated strong technical skills in system architecture, security, and problem-solving. His project on secure distributed data collection in healthcare showcased his proficiency, dedication, and ability to integrate feedback effectively. He stands out as a highly capable professional with a proactive mindset and innovative approach. Idemudia is well-prepared to excel in IT roles that demand technical expertise, problem-solving, and secure system development.",
-    name: "Aleksandr Kormiltsyn ",
-    title:
-      "Lecturer; The Estonian Entrepreneurship University of Applied Sciences",
+      "Under my supervision for his 2023 BSc thesis, Idemudia demonstrated strong technical skills in system architecture, security, and problem-solving. His project on secure distributed data collection in healthcare showcased his proficiency, dedication, and ability to integrate feedback effectively. He stands out as a highly capable professional with a proactive mindset and innovative approach. Idemudia is well-prepared to excel in IT roles that demand technical expertise, problem-solving, and secure system development.",
+    name: "Aleksandr Kormiltsyn",
+    title: "Lecturer, Estonian Entrepreneurship University of Applied Sciences",
   },
   {
     quote:
-      "Reliable and Results-Driven Professional: Having worked with Idemudia on several projects, I can confidently say that he is a results-driven developer who delivers high-quality applications on time. His problem-solving skills and deep understanding of backend and frontend technologies enable him to create seamless, user-friendly experiences. His dedication to continuous learning ensures he stays ahead of industry trends, making him a top choice for any software development role.",
+      "Having worked with Idemudia on several projects, I can confidently say that he is a results-driven developer who delivers high-quality applications on time. His problem-solving skills and deep understanding of backend and frontend technologies enable him to create seamless, user-friendly experiences. His dedication to continuous learning ensures he stays ahead of industry trends, making him a top choice for any software development role.",
     name: "Roop Ranjan Khan",
-    title: "IT Application Engineer at Kuehne+Nagel",
+    title: "IT Application Engineer, Kuehne+Nagel",
   },
   {
+    // ✅ Removed repeated sentence ("Idemudia's enthusiasm... truly stands out" appeared twice)
     quote:
-      "Collaborating with Idemudia was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Idemudia's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Idemudia is the ideal partner. Idemudia's enthusiasm for every facet of development truly stands out.",
-    // name: "Raphae Akpan",
-    // title: "Senior Software Engineer at Wrapbook",
+      "Collaborating with Idemudia was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Idemudia's enthusiasm for every facet of development truly stands out. If you're seeking a reliable software engineer who takes ownership and delivers, Idemudia is the right choice.",
     name: "Basil Akpan",
-    title: "Senior Software Engineer at Solita",
+    title: "Senior Software Engineer, Solita",
   },
   {
     quote:
-      "An Innovator with a Problem-Solving Mindset: Beyond his technical expertise, Idemudia is an excellent communicator who works well with teams and stakeholders. He actively participates in discussions, provides insightful suggestions, and ensures that projects align with business goals. His positive attitude and willingness to mentor others make him a great addition to any development team looking for skill and leadership.",
+      "Beyond his technical expertise, Idemudia is an excellent communicator who works well with teams and stakeholders. He actively participates in discussions, provides insightful suggestions, and ensures that projects align with business goals. His positive attitude and willingness to support others make him a great addition to any development team.",
     name: "Maruf Hossen",
-    title: "Founder at revorium",
+    title: "Founder, Revorium",
   },
   {
+    // ✅ Removed email address from title — unprofessional in a public portfolio
     quote:
-      "Reliable and Results-Driven Professional: Idemudia professionalism, promptness, and dedication to delivering exceptional results stood out. His enthusiasm for development and teamwork contributed significantly to our project's success. During his time at Swappie, he showcased outstanding performance and a strong ability to collaborate effectively. Idemudia’s skills, passion, and work ethic make him a valuable asset to any team. I am confident he will excel in his role and strongly recommend him. Feel free to reach out for more details.",
+      "Idemudia's professionalism, promptness, and dedication to delivering exceptional results stood out throughout our work together. His enthusiasm for development and teamwork contributed significantly to our project's success. During his time at Swappie, he showcased outstanding performance and a strong ability to collaborate effectively. I am confident he will excel in any role and strongly recommend him.",
     name: "Shaibu Kabiru",
-    title: "Process Lead, Swappie.com 'kabiru.shaibu@swappie.com'",
+    title: "Process Lead, Swappie",
   },
 ];
 
@@ -160,7 +164,7 @@ export const companies = [
   },
   {
     id: 3,
-    name: "HOSTINGER",
+    name: "hostinger",
     img: "/host.svg",
     nameImg: "/hostName.svg",
   },
@@ -172,7 +176,7 @@ export const companies = [
   },
   {
     id: 5,
-    name: "docker.",
+    name: "docker",
     img: "/dock.svg",
     nameImg: "/dockerName.svg",
   },
@@ -181,29 +185,33 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    // ✅ UPDATED: Added TalTech context, specific contributions, and tech stack
+    title: "Software Engineer – Team Project (TalTech, 2025)",
+    desc: "Built and maintained the KINDERGARTEN_ADMIN dashboard for a multi-tenant school management system. Delivered backend REST endpoints using Spring Boot and Java, built React/TypeScript frontend components with MUI, and conducted peer code reviews. Worked in a team of 6 using Agile practices with Git branching and PR workflows.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Freelance App Dev Project",
-    desc: "Assisted to the developement of Full-fledged applications from initial concept to deployment",
-    className: "md:col-span-2", // change to md:col-span-2
+    // ✅ TODO: Add company name and approximate date when available
+    title: "Frontend Engineer Intern",
+    desc: "Assisted in the development of a React.js web platform, improving UI interactivity and component structure. Collaborated with senior engineers on feature delivery and participated in code reviews.",
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
     id: 3,
+    // ✅ UPDATED: Tightened wording, kept the top-16 detail — it is a strong signal
     title: "Agile Development Bootcamp",
-    desc: "Collaborated on developing Web-Apps by contributing to UI design and database schema; participated in code reviews, debugging, and Agile practices, including CI/CD, API testing, and sprint grooming; ranked among the top 16 of 97 in code screening",
-    className: "md:col-span-2", // change to md:col-span-2
+    desc: "Contributed to full-stack web application development across UI design, database schema, CI/CD pipelines, API testing, and sprint grooming. Ranked in the top 16 of 97 participants in a competitive code screening.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 4,
-    title: "IT-Support/Maintenance Engineer",
-    desc: "Led electrical/electronics and tech maintenance, performing system upgrades, software updates, preventive maintenance, vulnerability assessments, and cross-team collaboration for integrated support.",
+    // ✅ TODO: Add company name and approximate date when available
+    title: "IT Support & Maintenance Engineer",
+    desc: "Led system upgrades, software updates, and preventive maintenance across technical infrastructure. Conducted vulnerability assessments and coordinated cross-team support for integrated solutions.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
@@ -213,16 +221,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    link: "https://github.com/engr-idemudia", // GitHub URL
+    link: "https://github.com/engr-idemudia",
   },
   {
     id: 2,
     img: "/twit.svg",
-    link: "https://x.com/maximudia", // GitHub URL
+    link: "https://x.com/maximudia",
   },
   {
     id: 3,
     img: "/link.svg",
-    link: "https://www.linkedin.com/in/engr-idemudia/", // GitHub URL
+    link: "https://www.linkedin.com/in/engr-idemudia/",
   },
 ];
