@@ -401,11 +401,6 @@ const GridGlobe = () => {
         <div className="absolute w-full h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
-        <div className="absolute bottom-2 right-3 flex justify-end z-50 pointer-events-none">
-          <p className="text-xs text-white/30 tracking-widest uppercase">
-            drag to rotate
-          </p>
-        </div>
       </div>
     </div>
   );
