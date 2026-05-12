@@ -132,7 +132,7 @@ const Card = ({
 // add order prop for the Phase number change
 const AceternityIcon = ({ order }: { order: string }) => {
   return (
-    <div>
+    <div className="flex flex-col items-center gap-2">
       <button className="relative inline-flex overflow-hidden rounded-full p-[1px] ">
         <span
           className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]
@@ -144,10 +144,10 @@ const AceternityIcon = ({ order }: { order: string }) => {
         >
           {order}
         </span>
-        <span className="block text-center text-white/50 text-xs mt-2 tracking-widest uppercase">
-          hover to explore
-        </span>
       </button>
+      <span className="text-white/50 text-xs tracking-widest uppercase">
+        hover to explore
+      </span>
     </div>
   );
 };
