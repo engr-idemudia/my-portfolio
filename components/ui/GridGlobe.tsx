@@ -10,12 +10,12 @@ const World = dynamic(() => import("./Globe").then((m) => m.World), {
 const GridGlobe = () => {
   const globeConfig = {
     pointSize: 4,
-    globeColor: "#062056",
+    globeColor: "#1a3a8f",
     showAtmosphere: true,
-    atmosphereColor: "#FFFFFF",
-    atmosphereAltitude: 0.1,
+    atmosphereColor: "#4a9eff",
+    atmosphereAltitude: 0.3,
     emissive: "#062056",
-    emissiveIntensity: 0.1,
+    emissiveIntensity: 0.4,
     shininess: 0.9,
     polygonColor: "rgba(255,255,255,0.7)",
     ambientLight: "#38bdf8",
@@ -395,12 +395,16 @@ const GridGlobe = () => {
   ];
 
   return (
-    <div className="flex items-center justify-center absolute -left-5 top-36 md:top-40 w-full h-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-96 px-4">
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-        {/* remove -bottom-20 */}
-        <div className="absolute w-full h-72 md:h-full z-10">
+    <div className="flex items-center justify-center absolute -right-10 -top-10 w-full h-[150%]">
+      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full px-4">
+        <div className="absolute w-full bottom-0 inset-x-0 h-10 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+        <div className="absolute w-full h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />
+        </div>
+        <div className="absolute bottom-2 right-3 flex justify-end z-50 pointer-events-none">
+          <p className="text-xs text-white/30 tracking-widest uppercase">
+            drag to rotate
+          </p>
         </div>
       </div>
     </div>
