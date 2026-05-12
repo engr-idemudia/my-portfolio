@@ -7,9 +7,9 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Idemudia's Portfolio",
+  title: "Idemudia M. Osaghae | Software Engineer",
   description:
-    "A modern Next.js portfolio with Framer Motion animations, showcasing projects and skills in a sleek, responsive and SEO-optimized design.",
+    "Software Engineer based in Tallinn, Estonia, specialising in backend development, fintech, and secure systems. Open to remote, onsite, and hybrid roles.",
 };
 
 export default function RootLayout({
