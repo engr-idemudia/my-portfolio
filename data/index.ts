@@ -185,7 +185,6 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    // ✅ UPDATED: Added TalTech context, specific contributions, and tech stack
     title: "Software Engineer – Team Project (TalTech, 2025)",
     desc: "Built and maintained the KINDERGARTEN_ADMIN dashboard for a multi-tenant school management system. Delivered backend REST endpoints using Spring Boot and Java, built React/TypeScript frontend components with MUI, and conducted peer code reviews. Worked in a team of 6 using Agile practices with Git branching and PR workflows.",
     className: "md:col-span-2",
@@ -193,25 +192,22 @@ export const workExperience = [
   },
   {
     id: 2,
-    // ✅ TODO: Add company name and approximate date when available
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a React.js web platform, improving UI interactivity and component structure. Collaborated with senior engineers on feature delivery and participated in code reviews.",
+    title: "Junior Software Engineer – Zazuu Financial Services (2019–2020)",
+    desc: "Developed backend features supporting cross-border payment systems. Integrated financial APIs enabling secure digital payment processing. Debugged software defects, supported QA testing, and collaborated with product teams to improve system performance.",
     className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
     id: 3,
-    // ✅ UPDATED: Tightened wording, kept the top-16 detail — it is a strong signal
-    title: "Agile Development Bootcamp",
+    title: "Agile Development Bootcamp – AS Proekspert (2022)",
     desc: "Contributed to full-stack web application development across UI design, database schema, CI/CD pipelines, API testing, and sprint grooming. Ranked in the top 16 of 97 participants in a competitive code screening.",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 4,
-    // ✅ TODO: Add company name and approximate date when available
-    title: "IT Support & Maintenance Engineer",
-    desc: "Led system upgrades, software updates, and preventive maintenance across technical infrastructure. Conducted vulnerability assessments and coordinated cross-team support for integrated solutions.",
+    title: "IT Support & Systems Engineer – Ministry of Defence (2007–2019)",
+    desc: "Monitored mission-critical RADAR and IT infrastructure systems. Diagnosed hardware and software failures, implemented system upgrades, security monitoring procedures, and maintained technical documentation for operational teams.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
