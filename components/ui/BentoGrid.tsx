@@ -89,8 +89,10 @@ export const BentoGridItem = ({
               alt={img}
               className={cn(
                 imgClassName,
-                "object-cover",
-                id === 1 ? "object-left-top" : "object-center",
+                "object-cover transition duration-500",
+                id === 1
+                  ? "object-center object-right-top group-hover/bento:scale-105"
+                  : "object-center",
               )}
             />
           )}
@@ -127,9 +129,11 @@ export const BentoGridItem = ({
         <div
           className={cn(
             titleClassName,
-            "group-hover/bento:translate-x-2 transition duration-200 relative h-full min-h-40 flex flex-col px-5 p-5 lg:p-10",
+            "transition duration-200 relative h-full min-h-40 flex flex-col px-5 p-5 lg:p-10",
+            id === 1 && "!justify-end !items-center !text-center",
+            id !== 1 && "group-hover/bento:translate-x-2",
             // Card 2 (globe): anchored top-left, tight padding
-            id === 2 && "!justify-start !items-start !p-3 !px-3",
+            id === 2 && "!justify-end !items-start !p-3 !px-3",
             // Card 3 (tech stack): right padding so title clears the pill columns
             id === 3 && "!pr-28 sm:!pr-32 lg:!pr-0",
             // Card 5 (code snippet): push text to bottom-left, leave right side for code
@@ -140,6 +144,8 @@ export const BentoGridItem = ({
           <div
             className={cn(
               "font-sans font-extralight text-[10px] sm:text-xs md:text-xs lg:text-base text-[#C1C2D3] z-10",
+              id === 1 && "!text-white !opacity-100",
+              id === 2 && "!text-[9px]",
               // Card 5: constrain to left half so it doesn't cover the code
               id === 5 &&
                 "text-xs sm:text-sm md:text-sm lg:text-base max-w-[44%] md:max-w-[44%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
@@ -154,10 +160,10 @@ export const BentoGridItem = ({
               "font-sans z-20 font-bold",
               // Card 1: readable over gradient overlay
               id === 1 &&
-                "text-sm sm:text-base md:text-lg lg:text-2xl max-w-[88%]",
+                "text-sm sm:text-base md:text-lg lg:text-2xl max-w-[88%] !text-white !opacity-100",
               // Card 2 (globe): frosted pill background
               id === 2 &&
-                "text-xs sm:text-sm lg:text-base max-w-[10rem] relative bg-[rgba(4,7,29,0.6)] rounded-xl p-2 backdrop-blur-sm",
+                "text-xs max-w-[8rem] relative bg-[rgba(4,7,29,0.5)] rounded-lg p-1 backdrop-blur-sm leading-tight",
               // Card 5: constrained left half, frosted bg, subtle right accent border
               id === 5 &&
                 "text-xs sm:text-sm md:text-sm lg:text-base max-w-[52%] md:max-w-[48%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
@@ -175,7 +181,7 @@ export const BentoGridItem = ({
           {id === 2 && (
             <>
               <GridGlobe />
-              <p className="absolute bottom-3 right-3 z-50 text-xs text-white/60 tracking-widest uppercase bg-black/40 px-2 py-1 rounded-md backdrop-blur-sm">
+              <p className="absolute bottom-2 right-12 z-50 text-[10px] text-white/60 tracking-widest uppercase whitespace-nowrap">
                 drag to rotate
               </p>
             </>

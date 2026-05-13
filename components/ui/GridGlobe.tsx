@@ -10,15 +10,15 @@ const World = dynamic(() => import("./Globe").then((m) => m.World), {
 const GridGlobe = () => {
   const globeConfig = {
     pointSize: 4,
-    globeColor: "#1a3a8f",
+    globeColor: "#3d2b8f",
     showAtmosphere: true,
-    atmosphereColor: "#4a9eff",
+    atmosphereColor: "#c0c0c0",
     atmosphereAltitude: 0.3,
-    emissive: "#062056",
-    emissiveIntensity: 0.4,
-    shininess: 0.9,
-    polygonColor: "rgba(255,255,255,0.7)",
-    ambientLight: "#38bdf8",
+    emissive: "#1a0a3d",
+    emissiveIntensity: 0.1,
+    shininess: 1,
+    polygonColor: "rgba(203,172,249,1)",
+    ambientLight: "#ffffff",
     directionalLeftLight: "#ffffff",
     directionalTopLight: "#ffffff",
     pointLight: "#ffffff",
@@ -30,7 +30,7 @@ const GridGlobe = () => {
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
-  const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+  const colors = ["#CBACF9", "#9c40ff", "#7c3aed"];
   const sampleArcs = [
     {
       order: 1,
@@ -395,7 +395,7 @@ const GridGlobe = () => {
   ];
 
   return (
-    <div className="flex items-center justify-center absolute -right-10 -top-10 w-full h-[150%]">
+    <div className="flex items-center justify-center absolute -right-2 -top-10 w-full h-[160%]">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full px-4">
         <div className="absolute w-full bottom-0 inset-x-0 h-10 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
         <div className="absolute w-full h-full z-10">
