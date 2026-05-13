@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
+import Image from "next/image";
 import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
@@ -84,10 +85,11 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
-            <img
+            <Image
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
+              fill
+              className={cn(imgClassName, "object-cover object-center")}
             />
           )}
         </div>
@@ -97,11 +99,11 @@ export const BentoGridItem = ({
           } `}
         >
           {spareImg && (
-            <img
+            <Image
               src={spareImg}
               alt={spareImg}
-              //   width={220}
-              className="object-cover object-center w-full h-full"
+              fill
+              className="object-cover object-center"
             />
           )}
         </div>
@@ -118,12 +120,12 @@ export const BentoGridItem = ({
             id === 2 && "!justify-start !items-start !p-3 !px-3",
           )}
         >
-          <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
+          <div className="font-sans font-extralight text-xs md:max-w-32 md:text-xs lg:text-base text-[#C1C2D3] z-10">
             {description}
           </div>
 
           <div
-            className={`font-sans z-20 font-bold ${id === 2 ? "text-sm lg:text-base max-w-[10rem] relative bg-[rgba(4,7,29,0.6)] rounded-xl p-2 backdrop-blur-sm" : "text-lg lg:text-3xl max-w-96"}`}
+            className={`font-sans z-20 font-bold ${id === 2 ? "text-xs sm:text-sm lg:text-base max-w-[10rem] relative bg-[rgba(4,7,29,0.6)] rounded-xl p-2 backdrop-blur-sm" : "text-sm sm:text-base md:text-lg lg:text-2xl max-w-96"}`}
           >
             {title}
           </div>

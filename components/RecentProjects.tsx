@@ -2,6 +2,7 @@
 
 import { FaLocationArrow } from "react-icons/fa6";
 
+import Image from "next/image";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 
@@ -12,24 +13,30 @@ const RecentProjects = () => {
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-x-24  gap-y-8 mt-10">
+      <div className="flex flex-wrap items-center justify-center p-4 gap-x-8 sm:gap-x-16 lg:gap-x-24 gap-y-8 mt-10">
         {projects.map((item) => (
           <div
-            className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
+            className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[92vw]"
             key={item.id}
           >
             <PinContainer title="View Project" href={item.link}>
-              <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
+              <div className="relative flex items-center justify-center sm:w-[570px] w-[92vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
-                  <img src="/bg.png" alt="bgimg" />
+                  <Image
+                    src="/bg.png"
+                    alt="bgimg"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <img
+                <Image
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute inset-0 w-full h-full object-cover object-left-top lg:rounded-3xl"
+                  fill
+                  className="z-10 object-cover object-left-top lg:rounded-3xl"
                 />
               </div>
 
@@ -57,7 +64,13 @@ const RecentProjects = () => {
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
                     >
-                      <img src={icon} alt="icon5" className="p-2" />
+                      <Image
+                        src={icon}
+                        alt="icon5"
+                        width={30}
+                        height={30}
+                        className="p-2"
+                      />
                     </div>
                   ))}
                 </div>

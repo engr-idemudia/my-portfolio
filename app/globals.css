@@ -70,8 +70,12 @@
   * {
     @apply border-border !scroll-smooth;
   }
+  html {
+    overflow-x: hidden;
+  }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
   button {
     @apply active:outline-none;
@@ -80,6 +84,6 @@
 
 @layer utilities {
   .heading {
-    @apply font-bold text-4xl md:text-5xl text-center;
+    @apply font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center;
   }
 }

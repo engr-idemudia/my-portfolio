@@ -2,6 +2,9 @@ import { withSentryConfig } from "@sentry/nextjs";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default withSentryConfig(
@@ -42,5 +45,5 @@ export default withSentryConfig(
     // https://docs.sentry.io/product/crons/
     // https://vercel.com/docs/cron-jobs
     automaticVercelMonitors: true,
-  }
+  },
 );
