@@ -8,14 +8,22 @@ const Hero = () => {
   return (
     <div className="pb-20 pt-36">
       <div>
+        {/* Grey left accent — behind everything */}
+        <Spotlight
+          className="-top-40 -left-40 md:-left-72 h-screen w-[80vw]"
+          fill="#9ca3af"
+        />
+        {/* Top left white spotlight */}
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
           fill="white"
         />
+        {/* Purple spotlight */}
         <Spotlight
           className="h-[80vh] w-[50vw] top-10 left-full"
           fill="purple"
         />
+        {/* Blue left accent */}
         <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
       </div>
 
