@@ -1,7 +1,6 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
-
 import Image from "next/image";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
@@ -46,10 +45,7 @@ const RecentProjects = () => {
 
               <p
                 className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
+                style={{ color: "#BEC1DD", margin: "1vh 0" }}
               >
                 {item.des}
               </p>
@@ -60,9 +56,7 @@ const RecentProjects = () => {
                     <div
                       key={index}
                       className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
+                      style={{ transform: `translateX(-${5 * index + 2}px)` }}
                     >
                       <Image
                         src={icon}
@@ -77,12 +71,12 @@ const RecentProjects = () => {
 
                 <div className="flex justify-center items-center">
                   <a
-                    href={item.link} // Replace with your actual link
+                    href={item.liveLink || item.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm md:text-xs lg:text-xl text-purple hover:underline"
                   >
-                    Check Live Site
+                    {item.liveLink ? "Live Demo" : "GitHub Repo"}
                   </a>
                   <FaLocationArrow className="ms-3" color="#CBACF9" />
                 </div>

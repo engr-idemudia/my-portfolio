@@ -8,6 +8,13 @@ const Hero = () => {
   return (
     <div className="pb-20 pt-20 sm:pt-28 md:pt-36">
       <div>
+        <a href="#projects">
+          <MagicButton
+            title="View my work"
+            icon={<FaLocationArrow />}
+            position="right"
+          />
+        </a>
         {/* Grey — behind blue, creates depth from above */}
         <Spotlight
           className="left-60 -top-30 h-screen w-[50vw]"
@@ -59,6 +66,28 @@ const Hero = () => {
 
       <div className="flex justify-center relative my-10 sm:my-16 md:my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+          {/* <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-[80vw] sm:max-w-none sm:whitespace-nowrap">
+            Software Engineer · Backend · Fintech · Security
+          </p> */}
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="relative flex h-3 w-3">
+              <span
+                className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
+                style={{ backgroundColor: "#CBACF9" }}
+              ></span>
+              <span
+                className="relative inline-flex rounded-full h-3 w-3"
+                style={{ backgroundColor: "#CBACF9" }}
+              ></span>
+            </span>
+            <span
+              className="text-xs font-medium tracking-widest uppercase"
+              style={{ color: "#CBACF9" }}
+            >
+              Open to Work
+            </span>
+          </div>
+
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-[80vw] sm:max-w-none sm:whitespace-nowrap">
             Software Engineer · Backend · Fintech · Security
           </p>
@@ -68,19 +97,39 @@ const Hero = () => {
             className="text-center text-[26px] sm:text-[36px] md:text-5xl lg:text-6xl"
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi, I&apos;m Idemudia, a Software Engineer based in Tallinn,
-            Estonia, focused on backend development, fintech, and secure
-            systems.
-          </p>
-
-          <a href="#about">
-            <MagicButton
-              title="View my work"
-              icon={<FaLocationArrow />}
-              position="right"
+          <div className="flex flex-col items-center gap-4 mb-4">
+            <img
+              src="/avatar.jpg"
+              alt="Idemudia M. Osaghae"
+              className="w-24 h-24 rounded-full object-cover border-2 border-[#CBACF9] shadow-lg"
             />
-          </a>
+            <p className="text-center md:tracking-wider text-sm md:text-lg lg:text-2xl">
+              Hi, I&apos;m Idemudia, a Software Engineer based in Tallinn,
+              Estonia, focused on backend development, fintech, and secure
+              systems.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <a href="#projects">
+              <MagicButton
+                title="View my work"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+            <a
+              href="/Idemudia_Osaghae_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MagicButton
+                title="Download CV"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>

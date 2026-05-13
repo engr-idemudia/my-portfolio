@@ -15,7 +15,7 @@ export const gridItems = [
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "/b1.jpg",
     spareImg: "",
   },
   {
@@ -56,7 +56,8 @@ export const gridItems = [
     description: "What I'm working on",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
+    // titleClassName: "justify-center md:justify-start lg:justify-center",
+    titleClassName: "justify-end",
     img: "/b5.svg",
     spareImg: "/grid.svg",
   },
@@ -75,32 +76,30 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    // ✅ REAL PROJECT: Banking App (your original fintech project)
     title: "Horizon – Fintech Banking Platform",
     des: "A full-stack banking dashboard with real-time transaction tracking, multi-bank account linking via Plaid, and peer-to-peer transfers via Dwolla. Built with Next.js 14, TypeScript, and Appwrite.",
     img: "/p1.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/app.svg", "/c.svg"],
-    // TODO: Replace with the actual GitHub repo URL for your Banking App
     link: "https://github.com/engr-idemudia/NextBank",
+    liveLink: "",
   },
   {
     id: 2,
-    // ✅ REAL PROJECT: TalTech Kindergarten Application (team project)
     title: "Multi-Tenant Kindergarten Management System",
     des: "A role-based school management platform for admins, teachers, and parents. Features a full REST API backend (Spring Boot, Java), React/TypeScript frontend with MUI, JWT authentication, and PostgreSQL — developed in a team of 6 using Agile practices.",
     img: "/p2.jpg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
     link: "https://github.com/taltech-vanemarendajaks/team29-kindergarten-application",
+    liveLink: "",
   },
   {
     id: 3,
-    // ✅ REAL PROJECT: BSc Thesis (your security-focused academic project)
     title: "Secure Distributed Healthcare Data Collection System",
     des: "BSc thesis project: a secure distributed system for collecting patient data across healthcare nodes, incorporating encryption, access control, and system architecture best practices. Supervised at the Estonian Entrepreneurship University of Applied Sciences.",
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    // TODO: Replace with GitHub repo URL if the thesis project is public, otherwise link to your main GitHub
-    link: "https://github.com/engr-idemudia/saas-translator-app",
+    link: "https://github.com/engr-idemudia",
+    liveLink: "",
   },
   {
     id: 4,
@@ -109,6 +108,7 @@ export const projects = [
     img: "/p4.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/Meal-Tracker-App",
+    liveLink: "",
   },
 ];
 

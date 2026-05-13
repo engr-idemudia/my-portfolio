@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
-import Image from "next/image";
 import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
@@ -81,56 +80,98 @@ export const BentoGridItem = ({
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
-      {/* add img divs */}
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
+        {/* Main background image */}
         <div className="w-full h-full absolute">
           {img && (
-            <Image
+            <img
               src={img}
               alt={img}
-              fill
-              className={cn(imgClassName, "object-cover object-center")}
+              className={cn(
+                imgClassName,
+                "object-cover",
+                id === 1 ? "object-left-top" : "object-center",
+              )}
             />
           )}
         </div>
+
+        {/* Card 1: gradient fade at bottom so text is always readable */}
+        {id === 1 && (
+          <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-[rgba(4,7,29,0.97)] via-[rgba(4,7,29,0.55)] to-transparent z-10 pointer-events-none" />
+        )}
+
+        {/* Spare image (card 4 and card 5) */}
         <div
           className={`absolute right-0 -bottom-5 ${
             id === 5 && "w-full opacity-80"
           } `}
         >
           {spareImg && (
-            <Image
+            <img
               src={spareImg}
               alt={spareImg}
-              fill
-              className="object-cover object-center"
+              className="object-cover object-center w-full h-full"
             />
           )}
         </div>
+
+        {/* Card 6 — gradient background animation */}
         {id === 6 && (
           <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-lg sm:text-2xl text-center md:text-4xl lg:text-7xl"></div>
           </BackgroundGradientAnimation>
         )}
 
+        {/* Title / description container */}
         <div
           className={cn(
             titleClassName,
-            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10",
+            "group-hover/bento:translate-x-2 transition duration-200 relative h-full min-h-40 flex flex-col px-5 p-5 lg:p-10",
+            // Card 2 (globe): anchored top-left, tight padding
             id === 2 && "!justify-start !items-start !p-3 !px-3",
+            // Card 3 (tech stack): right padding so title clears the pill columns
+            id === 3 && "!pr-28 sm:!pr-32 lg:!pr-0",
+            // Card 5 (code snippet): push text to bottom-left, leave right side for code
+            id === 5 && "!justify-end !pb-5 !pl-5 !pr-0",
           )}
         >
-          <div className="font-sans font-extralight text-xs md:max-w-32 md:text-xs lg:text-base text-[#C1C2D3] z-10">
+          {/* Description label */}
+          <div
+            className={cn(
+              "font-sans font-extralight text-[10px] sm:text-xs md:text-xs lg:text-base text-[#C1C2D3] z-10",
+              // Card 5: constrain to left half so it doesn't cover the code
+              id === 5 &&
+                "text-xs sm:text-sm md:text-sm lg:text-base max-w-[44%] md:max-w-[44%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
+            )}
+          >
             {description}
           </div>
 
+          {/* Title */}
           <div
-            className={`font-sans z-20 font-bold ${id === 2 ? "text-xs sm:text-sm lg:text-base max-w-[10rem] relative bg-[rgba(4,7,29,0.6)] rounded-xl p-2 backdrop-blur-sm" : "text-sm sm:text-base md:text-lg lg:text-2xl max-w-96"}`}
+            className={cn(
+              "font-sans z-20 font-bold",
+              // Card 1: readable over gradient overlay
+              id === 1 &&
+                "text-sm sm:text-base md:text-lg lg:text-2xl max-w-[88%]",
+              // Card 2 (globe): frosted pill background
+              id === 2 &&
+                "text-xs sm:text-sm lg:text-base max-w-[10rem] relative bg-[rgba(4,7,29,0.6)] rounded-xl p-2 backdrop-blur-sm",
+              // Card 5: constrained left half, frosted bg, subtle right accent border
+              id === 5 &&
+                "text-xs sm:text-sm md:text-sm lg:text-base max-w-[52%] md:max-w-[48%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
+              // All other cards (3, 4, 6)
+              id !== 1 &&
+                id !== 2 &&
+                id !== 5 &&
+                "text-xs sm:text-sm md:text-base lg:text-2xl max-w-96",
+            )}
           >
             {title}
           </div>
 
-          {/* for the github 3d globe */}
+          {/* Card 2 — 3D globe */}
           {id === 2 && (
             <>
               <GridGlobe />
@@ -140,29 +181,26 @@ export const BentoGridItem = ({
             </>
           )}
 
-          {/* Tech stack list div */}
+          {/* Card 3 — Tech stack pills */}
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute right-2 lg:right-4 overflow-y-auto max-h-full">
-              {/* tech stack lists */}
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+            <div className="flex gap-1 lg:gap-5 w-fit absolute right-2 lg:right-4">
+              <div className="flex flex-col gap-2 md:gap-2 lg:gap-3">
                 {leftLists.map((item, i) => (
                   <span
                     key={i}
-                    className="lg:py-2 lg:px-3 py-1 px-2 text-xs lg:text-sm opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    className="lg:py-2 lg:px-3 py-1 px-2 text-[10px] lg:text-sm rounded-lg text-center bg-[#10132E] border border-[#CBACF9]/30 hover:border-[#CBACF9] transition duration-200"
                   >
                     {item}
                   </span>
                 ))}
                 <span className="lg:py-1 lg:px-3 py-1 px-2 rounded-lg text-center bg-[#10132E]"></span>
               </div>
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+              <div className="flex flex-col gap-2 md:gap-2 lg:gap-3">
                 <span className="lg:py-1 lg:px-3 py-1 px-2 rounded-lg text-center bg-[#10132E]"></span>
                 {rightLists.map((item, i) => (
                   <span
                     key={i}
-                    className="lg:py-2 lg:px-3 py-1 px-2 text-xs lg:text-sm opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    className="lg:py-2 lg:px-3 py-1 px-2 text-[10px] lg:text-sm rounded-lg text-center bg-[#10132E] border border-[#CBACF9]/30 hover:border-[#CBACF9] transition duration-200"
                   >
                     {item}
                   </span>
@@ -170,6 +208,8 @@ export const BentoGridItem = ({
               </div>
             </div>
           )}
+
+          {/* Card 6 — Copy email button */}
           {id === 6 && (
             <div className="mt-5 relative">
               <div
@@ -177,7 +217,6 @@ export const BentoGridItem = ({
                   copied ? "block" : "block"
                 }`}
               >
-                {/* <img src="/confetti.gif" alt="confetti" /> */}
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 

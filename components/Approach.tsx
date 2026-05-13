@@ -23,7 +23,7 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Development & Progress Update"
+          title="Development & Iteration"
           icon={<AceternityIcon order="Phase 2" />}
           des="I build iteratively, writing clean and well-structured code with regular progress updates. I follow best practices including code reviews, version control, and testing throughout the development cycle."
         >
@@ -40,7 +40,7 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Development & Launch"
+          title="Testing & Launch"
           icon={<AceternityIcon order="Phase 3" />}
           des="Once the build is stable and tested, I handle deployment, documentation, and handover. I ensure the final product is secure, performant, and maintainable for the long term."
         >
