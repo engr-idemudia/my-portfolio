@@ -9,8 +9,8 @@ const Clients = () => {
   return (
     <section id="testimonials" className="py-20">
       <h1 className="heading">
-        Kind words from
-        <span className="text-purple"> Referrers</span>
+        Kind <span className="text-purple">words</span> from{" "}
+        <span className="text-purple">Referrers</span>
       </h1>
 
       <div className="flex flex-col items-center max-lg:mt-10">

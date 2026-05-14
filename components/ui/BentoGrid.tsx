@@ -93,6 +93,8 @@ export const BentoGridItem = ({
                 id === 1
                   ? "object-center object-right-top group-hover/bento:scale-105"
                   : "object-center",
+                id === 5 &&
+                  "brightness-[1.2] contrast-[1.1] drop-shadow-[0_0_18px_rgba(203,172,249,0.35)]",
               )}
             />
           )}
@@ -137,7 +139,7 @@ export const BentoGridItem = ({
             // Card 3 (tech stack): right padding so title clears the pill columns
             id === 3 && "!pr-28 sm:!pr-32 lg:!pr-0",
             // Card 5 (code snippet): push text to bottom-left, leave right side for code
-            id === 5 && "!justify-end !pb-5 !pl-5 !pr-0",
+            id === 5 && "!justify-center !pb-5 !pl-5 !pr-0",
           )}
         >
           {/* Description label */}
@@ -148,7 +150,7 @@ export const BentoGridItem = ({
               id === 2 && "!text-[9px]",
               // Card 5: constrain to left half so it doesn't cover the code
               id === 5 &&
-                "text-xs sm:text-sm md:text-sm lg:text-base max-w-[44%] md:max-w-[44%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
+                "text-xs sm:text-sm md:text-sm lg:text-base max-w-[38%] md:max-w-[38%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
             )}
           >
             {description}
@@ -163,10 +165,10 @@ export const BentoGridItem = ({
                 "text-sm sm:text-base md:text-lg lg:text-2xl max-w-[88%] !text-white !opacity-100",
               // Card 2 (globe): frosted pill background
               id === 2 &&
-                "text-xs max-w-[8rem] relative bg-[rgba(4,7,29,0.5)] rounded-lg p-1 backdrop-blur-sm leading-tight",
+                "text-sm sm:text-base max-w-[10rem] relative bg-[rgba(4,7,29,0.5)] rounded-lg p-1 backdrop-blur-sm leading-tight",
               // Card 5: constrained left half, frosted bg, subtle right accent border
               id === 5 &&
-                "text-xs sm:text-sm md:text-sm lg:text-base max-w-[52%] md:max-w-[48%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
+                "text-sm sm:text-base md:text-base lg:text-xl max-w-[42%] md:max-w-[40%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
               // All other cards (3, 4, 6)
               id !== 1 &&
                 id !== 2 &&
@@ -181,7 +183,7 @@ export const BentoGridItem = ({
           {id === 2 && (
             <>
               <GridGlobe />
-              <p className="absolute bottom-2 right-12 z-50 text-[10px] text-white/60 tracking-widest uppercase whitespace-nowrap">
+              <p className="absolute top-3 right-4 z-50 text-[10px] text-white/60 tracking-widest uppercase whitespace-nowrap">
                 drag to rotate
               </p>
             </>

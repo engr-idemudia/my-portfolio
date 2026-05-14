@@ -20,7 +20,7 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "Open to remote, onsite, and hybrid roles across time zones",
+    title: "Open to remote, onsite & hybrid roles worldwide",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -55,7 +55,7 @@ export const gridItems = [
       "Currently building a full-stack fintech banking platform with real-time transactions",
     description: "What I'm working on",
     className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
+    imgClassName: "absolute right-0 bottom-0 md:w-[28rem] w-72",
     // titleClassName: "justify-center md:justify-start lg:justify-center",
     titleClassName: "justify-end",
     img: "/b5.svg",
@@ -94,11 +94,11 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Secure Distributed Healthcare Data Collection System",
-    des: "BSc thesis project: a secure distributed system for collecting patient data across healthcare nodes, incorporating encryption, access control, and system architecture best practices. Supervised at the Estonian Entrepreneurship University of Applied Sciences.",
+    title: "SaaS Platform with Stripe Payments & Real-Time Chat",
+    des: "A full-stack SaaS platform with Stripe subscription payments, Firebase Firestore, and real-time multi-language chat translation. Features NextAuth authentication, Stripe webhooks, Zustand state management, and role-based access for free and pro tiers. Built with Next.js 13, TypeScript, Shadcn UI, and Tailwind CSS.",
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/engr-idemudia",
+    link: "https://github.com/engr-idemudia/saas-translator-app",
     liveLink: "",
   },
   {
@@ -114,35 +114,26 @@ export const projects = [
 
 export const testimonials = [
   {
-    // ✅ Removed "Proven Expertise..." label — let the quote speak for itself
     quote:
-      "Under my supervision for his 2023 BSc thesis, Idemudia demonstrated strong technical skills in system architecture, security, and problem-solving. His project on secure distributed data collection in healthcare showcased his proficiency, dedication, and ability to integrate feedback effectively. He stands out as a highly capable professional with a proactive mindset and innovative approach. Idemudia is well-prepared to excel in IT roles that demand technical expertise, problem-solving, and secure system development.",
+      "Idemudia demonstrated strong technical skills in system architecture, security, and problem-solving during his BSc thesis. His proactive mindset and ability to integrate feedback make him well-prepared to excel in demanding IT roles.",
     name: "Aleksandr Kormiltsyn",
     title: "Lecturer, Estonian Entrepreneurship University of Applied Sciences",
   },
   {
     quote:
-      "Having worked with Idemudia on several projects, I can confidently say that he is a results-driven developer who delivers high-quality applications on time. His problem-solving skills and deep understanding of backend and frontend technologies enable him to create seamless, user-friendly experiences. His dedication to continuous learning ensures he stays ahead of industry trends, making him a top choice for any software development role.",
+      "Idemudia is a results-driven developer who delivers high-quality applications on time. His deep understanding of backend and frontend technologies, combined with a dedication to continuous learning, makes him a top choice for any software development role.",
     name: "Roop Ranjan Khan",
     title: "IT Application Engineer, Kuehne+Nagel",
   },
   {
-    // ✅ Removed repeated sentence ("Idemudia's enthusiasm... truly stands out" appeared twice)
     quote:
-      "Collaborating with Idemudia was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Idemudia's enthusiasm for every facet of development truly stands out. If you're seeking a reliable software engineer who takes ownership and delivers, Idemudia is the right choice.",
-    name: "Basil Akpan",
-    title: "Senior Software Engineer, Solita",
-  },
-  {
-    quote:
-      "Beyond his technical expertise, Idemudia is an excellent communicator who works well with teams and stakeholders. He actively participates in discussions, provides insightful suggestions, and ensures that projects align with business goals. His positive attitude and willingness to support others make him a great addition to any development team.",
+      "Beyond his technical skills, Idemudia is an excellent communicator who aligns projects with business goals. His positive attitude and willingness to support teammates make him a great addition to any development team.",
     name: "Maruf Hossen",
     title: "Founder, Revorium",
   },
   {
-    // ✅ Removed email address from title — unprofessional in a public portfolio
     quote:
-      "Idemudia's professionalism, promptness, and dedication to delivering exceptional results stood out throughout our work together. His enthusiasm for development and teamwork contributed significantly to our project's success. During his time at Swappie, he showcased outstanding performance and a strong ability to collaborate effectively. I am confident he will excel in any role and strongly recommend him.",
+      "During his time at Swappie, Idemudia consistently demonstrated outstanding performance and strong teamwork. His professionalism and dedication to delivering results make him a valuable asset to any team.",
     name: "Shaibu Kabiru",
     title: "Process Lead, Swappie",
   },
@@ -151,41 +142,47 @@ export const testimonials = [
 export const companies = [
   {
     id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
+    name: "docker",
+    img: "/dock.svg",
+    nameImg: "/dockerName.svg",
   },
   {
     id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
     name: "hostinger",
     img: "/host.svg",
     nameImg: "/hostName.svg",
   },
   {
+    id: 3,
+    name: "github",
+    img: "/git.svg",
+    nameImg: "/githubName.svg",
+  },
+  {
     id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
+    name: "vercel",
+    img: "/vercel.svg",
+    nameImg: "/vercelName.svg",
   },
   {
     id: 5,
-    name: "docker",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
+    name: "postgresql",
+    img: "/pg.svg",
+    nameImg: "/pgName.svg",
+  },
+  {
+    id: 6,
+    name: "firebase",
+    img: "/firebase.svg",
+    nameImg: "/firebaseName.svg",
   },
 ];
 
 export const workExperience = [
   {
     id: 1,
-    title: "Software Engineer – Team Project (TalTech, 2025)",
-    desc: "Built and maintained the KINDERGARTEN_ADMIN dashboard for a multi-tenant school management system. Delivered backend REST endpoints using Spring Boot and Java, built React/TypeScript frontend components with MUI, and conducted peer code reviews. Worked in a team of 6 using Agile practices with Git branching and PR workflows.",
+    title: "Freelance Software Engineer (2022–present)",
+    desc: "Delivering custom backend and full-stack solutions with a focus on security, scalability, and clean architecture. Work includes REST API development, third-party integrations, and frontend builds using Node.js, React, TypeScript, and Next.js.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
