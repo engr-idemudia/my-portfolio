@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
+import { FaLock, FaShieldAlt, FaDatabase } from "react-icons/fa";
 
 import Lottie from "react-lottie";
 
@@ -48,8 +49,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Next.JS", "Typescript", "Java"];
-  const rightLists = ["SQL", "Node.JS", "Python", "SpringBoot"];
+  const leftLists = ["Java", "Python", "JavaScript", "TypeScript", "ReactJS"];
+  const rightLists = ["SpringBoot", "Node.JS", "Next.JS", "SQL", "REST APIs"];
 
   const [copied, setCopied] = useState(false);
 
@@ -135,22 +136,22 @@ export const BentoGridItem = ({
             id === 1 && "!justify-end !items-center !text-center",
             id !== 1 && "group-hover/bento:translate-x-2",
             // Card 2 (globe): anchored top-left, tight padding
-            id === 2 && "!justify-end !items-start !p-3 !px-3",
+            id === 2 && "!justify-end !items-start !p-2 !px-2",
             // Card 3 (tech stack): right padding so title clears the pill columns
-            id === 3 && "!pr-28 sm:!pr-32 lg:!pr-0",
+            id === 3 && "!pr-24 sm:!pr-28 lg:!pr-0",
             // Card 5 (code snippet): push text to bottom-left, leave right side for code
-            id === 5 && "!justify-center !pb-5 !pl-5 !pr-0",
+            id === 5 && "!justify-start !pt-4 !pl-4 !pr-4",
           )}
         >
           {/* Description label */}
           <div
             className={cn(
-              "font-sans font-extralight text-[10px] sm:text-xs md:text-xs lg:text-base text-[#C1C2D3] z-10",
+              "font-sans font-extralight text-xs md:text-xs lg:text-sm text-[#C1C2D3] z-10",
               id === 1 && "!text-white !opacity-100",
               id === 2 && "!text-[9px]",
               // Card 5: constrain to left half so it doesn't cover the code
               id === 5 &&
-                "text-xs sm:text-sm md:text-sm lg:text-base max-w-[38%] md:max-w-[38%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
+                "text-xs md:text-xs lg:text-sm max-w-[38%] md:max-w-full lg:max-w-[45%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
             )}
           >
             {description}
@@ -162,18 +163,19 @@ export const BentoGridItem = ({
               "font-sans z-20 font-bold",
               // Card 1: readable over gradient overlay
               id === 1 &&
-                "text-sm sm:text-base md:text-lg lg:text-2xl max-w-[88%] !text-white !opacity-100",
+                "text-xs sm:text-xs md:text-sm lg:text-2xl max-w-[88%] !text-white !opacity-100",
               // Card 2 (globe): frosted pill background
               id === 2 &&
-                "text-sm sm:text-base max-w-[10rem] relative bg-[rgba(4,7,29,0.5)] rounded-lg p-1 backdrop-blur-sm leading-tight",
+                "text-sm sm:text-base max-w-[10rem] relative bg-transparent rounded-lg px-1 py-0 backdrop-blur-sm leading-tight",
               // Card 5: constrained left half, frosted bg, subtle right accent border
               id === 5 &&
-                "text-sm sm:text-base md:text-base lg:text-xl max-w-[42%] md:max-w-[40%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
+                "text-xs sm:text-sm md:text-base lg:text-xl max-w-[38%] md:max-w-full lg:max-w-[35%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
               // All other cards (3, 4, 6)
               id !== 1 &&
                 id !== 2 &&
                 id !== 5 &&
-                "text-xs sm:text-sm md:text-base lg:text-2xl max-w-96",
+                id !== 6 &&
+                "text-xs sm:text-sm md:text-base lg:text-2xl max-w-[55%] !items-start !justify-start",
             )}
           >
             {title}
@@ -213,6 +215,24 @@ export const BentoGridItem = ({
                     {item}
                   </span>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {/* Card 4 — Security & fintech icons */}
+          {id === 4 && (
+            <div className="absolute bottom-8 right-14 flex gap-5">
+              <div className="flex flex-col items-center gap-2">
+                <FaShieldAlt className="text-[#CBACF9] text-4xl" />
+                <span className="text-[10px] text-[#C1C2D3]">Security</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <FaLock className="text-[#CBACF9] text-4xl" />
+                <span className="text-[10px] text-[#C1C2D3]">Fintech</span>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <FaDatabase className="text-[#CBACF9] text-4xl" />
+                <span className="text-[10px] text-[#C1C2D3]">Backend</span>
               </div>
             </div>
           )}

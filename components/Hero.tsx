@@ -6,15 +6,8 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-20 sm:pt-28 md:pt-36">
+    <div className="pb-5 pt-20 sm:pt-28 md:pt-36">
       <div>
-        <a href="#projects">
-          <MagicButton
-            title="View my work"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
         {/* Grey — behind blue, creates depth from above */}
         <Spotlight
           className="left-60 -top-30 h-screen w-[50vw]"

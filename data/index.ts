@@ -12,8 +12,9 @@ export const gridItems = [
     title:
       "I prioritise team collaboration and clear, direct communication with engineers and stakeholders",
     description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
+    className:
+      "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh] md:min-h-[50vh]",
+    imgClassName: "w-full h-full object-cover object-center",
     titleClassName: "justify-end",
     img: "/b1.jpg",
     spareImg: "",
@@ -42,11 +43,12 @@ export const gridItems = [
     id: 4,
     title: "Focused on backend development, software security, and fintech.",
     description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    className:
+      "lg:col-span-2 md:col-span-3 md:row-span-1 min-h-[160px] md:min-h-[220px]",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "/grid.svg",
-    spareImg: "/b4.svg",
+    spareImg: "",
   },
   {
     id: 5,
@@ -55,7 +57,7 @@ export const gridItems = [
       "Currently building a full-stack fintech banking platform with real-time transactions",
     description: "What I'm working on",
     className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-[28rem] w-72",
+    imgClassName: "absolute right-0 bottom-0 md:w-[32rem] w-56",
     // titleClassName: "justify-center md:justify-start lg:justify-center",
     titleClassName: "justify-end",
     img: "/b5.svg",
