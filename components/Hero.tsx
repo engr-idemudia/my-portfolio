@@ -86,7 +86,7 @@ const Hero = () => {
           </p>
 
           <TextGenerateEffect
-            words="Building Reliable Software with Clean Code and Secure Systems"
+            words="Backend Engineer Building Secure, Scalable Systems for Fintech"
             className="text-center text-[26px] sm:text-[36px] md:text-5xl lg:text-6xl"
           />
 
@@ -97,9 +97,9 @@ const Hero = () => {
               className="w-24 h-24 rounded-full object-cover border-2 border-[#CBACF9] shadow-lg"
             />
             <p className="text-center md:tracking-wider text-sm md:text-lg lg:text-2xl">
-              Hi, I&apos;m Idemudia, a Software Engineer based in Tallinn,
-              Estonia, focused on backend development, fintech, and secure
-              systems.
+              Hi, I&apos;m Idemudia — a Software Engineer based in Tallinn,
+              Estonia, specialising in backend development, fintech systems, and
+              application security.
             </p>
           </div>
 
