@@ -19,7 +19,10 @@ const RecentProjects = () => {
             className="sm:h-[41rem] h-[28rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[92vw]"
             key={item.id}
           >
-            <PinContainer title="View Project" href={item.link}>
+            <PinContainer
+              title="View Project"
+              href={item.liveLink || item.link}
+            >
               <div className="relative flex items-center justify-center sm:w-[570px] w-[92vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -70,16 +73,28 @@ const RecentProjects = () => {
                   ))}
                 </div>
 
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center gap-4">
+                  {item.liveLink && (
+                    <a
+                      href={item.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm md:text-xs lg:text-xl text-purple hover:underline flex items-center"
+                    >
+                      Live Demo
+                      <FaLocationArrow className="ms-2" color="#CBACF9" />
+                    </a>
+                  )}
+
                   <a
-                    href={item.liveLink || item.link}
+                    href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm md:text-xs lg:text-xl text-purple hover:underline"
+                    className="text-sm md:text-xs lg:text-xl text-purple hover:underline flex items-center"
                   >
-                    {item.liveLink ? "Live Demo" : "GitHub Repo"}
+                    GitHub
+                    <FaLocationArrow className="ms-2" color="#CBACF9" />
                   </a>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
                 </div>
               </div>
             </PinContainer>
