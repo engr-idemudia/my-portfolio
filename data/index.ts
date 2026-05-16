@@ -91,8 +91,8 @@ export const projects = [
     des: "A role-based school management platform for admins, teachers, and parents. Features a full REST API backend (Spring Boot, Java), React/TypeScript frontend with MUI, JWT authentication, and PostgreSQL — developed in a team of 6 using Agile practices.",
     img: "/p2.jpg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
-    link: "https://github.com/taltech-vanemarendajaks/team29-kindergarten-application",
-    liveLink: "",
+    link: "https://github.com/engr-idemudia/kindergarten-app",
+    liveLink: "https://kindergarten-app-rho.vercel.app",
   },
   {
     id: 3,
