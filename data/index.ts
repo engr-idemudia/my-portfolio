@@ -92,7 +92,7 @@ export const projects = [
     img: "/p2.jpg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/kindergarten-app",
-    liveLink: "https://kindergarten-app-rho.vercel.app",
+    liveLink: "https://kindergarten.idemudia.dev",
   },
   {
     id: 3,
