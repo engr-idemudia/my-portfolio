@@ -101,7 +101,7 @@ export const projects = [
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/saas-translator-app",
-    liveLink: "",
+    liveLink: "https://translator.idemudia.dev",
   },
   {
     id: 4,
