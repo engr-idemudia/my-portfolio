@@ -103,14 +103,23 @@ export const projects = [
     link: "https://github.com/engr-idemudia/saas-translator-app",
     liveLink: "https://translator.idemudia.dev",
   },
+  // {
+  //   id: 4,
+  //   title: "Meal Tracker Application",
+  //   des: "A full-stack backend application built with AdonisJS and MySQL. Features user authentication, meal tracking with calorie analysis, paginated meal history, reporting over time periods, and multi-language support including English, French, and Estonian.",
+  //   img: "/p4.svg",
+  //   iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
+  //   link: "https://github.com/engr-idemudia/Meal-Tracker-App",
+  //   liveLink: "",
+  // },
   {
     id: 4,
     title: "Meal Tracker Application",
-    des: "A full-stack backend application built with AdonisJS and MySQL. Features user authentication, meal tracking with calorie analysis, paginated meal history, reporting over time periods, and multi-language support including English, French, and Estonian.",
+    des: "A full-stack meal tracking app with user authentication, calorie logging, image uploads via Cloudinary, and detailed reports with date filtering. Built with Node.js, Express, PostgreSQL, and React.",
     img: "/p4.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
-    link: "https://github.com/engr-idemudia/Meal-Tracker-App",
-    liveLink: "",
+    link: "https://github.com/engr-idemudia/meal-tracker",
+    liveLink: "https://meal-tracker.idemudia.dev",
   },
 ];
 
