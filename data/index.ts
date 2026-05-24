@@ -117,7 +117,7 @@ export const projects = [
     title: "Meal Tracker Application",
     des: "A full-stack meal tracking app with user authentication, calorie logging, image uploads via Cloudinary, and detailed reports with date filtering. Built with Node.js, Express, PostgreSQL, and React.",
     img: "/p4.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
+    iconLists: ["/re.svg", "/pg.svg", "/ts.svg", "/cloud.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/meal-tracker",
     liveLink: "https://meal-tracker.idemudia.dev",
   },
