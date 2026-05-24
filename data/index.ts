@@ -89,7 +89,7 @@ export const projects = [
     id: 2,
     title: "Multi-Tenant Kindergarten Management System",
     des: "A role-based school management platform for admins, teachers, and parents. Features a full REST API backend (Spring Boot, Java), React/TypeScript frontend with MUI, JWT authentication, and PostgreSQL — developed in a team of 6 using Agile practices.",
-    img: "/p2.jpg",
+    img: "/p2-2.jpg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/kindergarten-app",
     liveLink: "https://kindergarten.idemudia.dev",
