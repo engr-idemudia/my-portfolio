@@ -98,7 +98,7 @@ export const projects = [
     id: 3,
     title: "SaaS Platform with Stripe Payments & Real-Time Chat",
     des: "A full-stack SaaS platform with Stripe subscription payments, Firebase Firestore, and real-time multi-language chat translation. Features NextAuth authentication, Stripe webhooks, Zustand state management, and role-based access for free and pro tiers. Built with Next.js 13, TypeScript, Shadcn UI, and Tailwind CSS.",
-    img: "/p3.svg",
+    img: "/p3-1.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/saas-translator-app",
     liveLink: "https://translator.idemudia.dev",
