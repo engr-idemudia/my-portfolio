@@ -78,12 +78,12 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Horizon – Fintech Banking Platform",
+    title: "NextBank – Fintech Banking Platform",
     des: "A full-stack banking dashboard with real-time transaction tracking, multi-bank account linking via Plaid, and peer-to-peer transfers via Dwolla. Built with Next.js 14, TypeScript, and Appwrite.",
     img: "/p1.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/app.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/NextBank",
-    liveLink: "",
+    liveLink: "https://nextbank.idemudia.dev",
   },
   {
     id: 2,
