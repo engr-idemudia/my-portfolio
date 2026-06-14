@@ -1,11 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { FaLocationArrow } from "react-icons/fa6";
 import Image from "next/image";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
+import VideoModal from "./ui/VideoModal";
 
 const RecentProjects = () => {
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+
   return (
     <div className="py-20" id="projects">
       <h1 className="heading">
@@ -74,16 +78,26 @@ const RecentProjects = () => {
                 </div>
 
                 <div className="flex justify-center items-center gap-4">
-                  {item.liveLink && (
-                    <a
-                      href={item.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  {item.demoVideo ? (
+                    <button
+                      onClick={() => setActiveVideo(item.demoVideo!)}
                       className="text-sm md:text-xs lg:text-xl text-purple hover:underline flex items-center"
                     >
                       Live Demo
                       <FaLocationArrow className="ms-2" color="#CBACF9" />
-                    </a>
+                    </button>
+                  ) : (
+                    item.liveLink && (
+                      <a
+                        href={item.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm md:text-xs lg:text-xl text-purple hover:underline flex items-center"
+                      >
+                        Live Demo
+                        <FaLocationArrow className="ms-2" color="#CBACF9" />
+                      </a>
+                    )
                   )}
 
                   <a
@@ -101,6 +115,10 @@ const RecentProjects = () => {
           </div>
         ))}
       </div>
+
+      {activeVideo && (
+        <VideoModal src={activeVideo} onClose={() => setActiveVideo(null)} />
+      )}
     </div>
   );
 };

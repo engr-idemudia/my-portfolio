@@ -84,6 +84,7 @@ export const projects = [
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/app.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/NextBank",
     liveLink: "https://nextbank.idemudia.dev",
+    demoVideo: "/demos/nextbank-demo",
   },
   {
     id: 2,
