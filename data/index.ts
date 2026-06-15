@@ -94,6 +94,7 @@ export const projects = [
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/kindergarten-app",
     liveLink: "https://kindergarten.idemudia.dev",
+    demoVideo: "/demos/kindergarten-demo",
   },
   {
     id: 3,
