@@ -89,7 +89,7 @@ export const projects = [
   {
     id: 2,
     title: "Multi-Tenant Kindergarten Management System",
-    des: "A role-based school management platform for admins, teachers, and parents. Features a full REST API backend (Spring Boot, Java), React/TypeScript frontend with MUI, JWT authentication, and PostgreSQL — developed in a team of 6 using Agile practices.",
+    des: "A role-based school management platform for admins, teachers, and parents. Features a full REST API backend (Spring Boot, Java), React/TypeScript frontend with MUI, JWT authentication, and PostgreSQL — developed in a team of 5 using Agile practices.",
     img: "/p2-2.jpg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/kindergarten-app",
@@ -194,7 +194,7 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Freelance Software Engineer (2022–present)",
+    title: "Freelance Software Engineer (2024–present)",
     desc: "Delivering custom backend and full-stack solutions with a focus on security, scalability, and clean architecture. Work includes REST API development, third-party integrations, and frontend builds using Node.js, React, TypeScript, and Next.js.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",

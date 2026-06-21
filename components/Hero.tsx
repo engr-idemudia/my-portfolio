@@ -82,11 +82,11 @@ const Hero = () => {
           </div>
 
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-[80vw] sm:max-w-none sm:whitespace-nowrap">
-            Software Engineer · Backend · Fintech · Security
+            Software Engineer · Backend · Full-Stack · Fintech · Security
           </p>
 
           <TextGenerateEffect
-            words="Backend Engineer Building Secure, Scalable Systems for Fintech"
+            words="Software Engineer Building Reliable, Secure Web Applications"
             className="text-center text-[26px] sm:text-[36px] md:text-5xl lg:text-6xl"
           />
 
@@ -98,8 +98,8 @@ const Hero = () => {
             />
             <p className="text-center md:tracking-wider text-sm md:text-lg lg:text-2xl">
               Hi, I&apos;m Idemudia — a Software Engineer based in Tallinn,
-              Estonia, specialising in backend development, fintech systems, and
-              application security.
+              Estonia, working across backend and full-stack development, with a
+              strong interest in security and clean architecture.
             </p>
           </div>
 
