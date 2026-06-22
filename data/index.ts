@@ -79,7 +79,7 @@ export const projects = [
   {
     id: 1,
     title: "NextBank – Fintech Banking Platform",
-    des: "A full-stack banking dashboard with real-time transaction tracking, multi-bank account linking via Plaid, and peer-to-peer transfers via Dwolla. Built with Next.js 14, TypeScript, and Appwrite.",
+    des: "A full-stack banking platform: multi-bank linking via Plaid, peer-to-peer transfers via Dwolla, and real-time transaction tracking.",
     img: "/nextbank.jpg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/app.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/NextBank",
@@ -89,7 +89,7 @@ export const projects = [
   {
     id: 2,
     title: "Multi-Tenant Kindergarten Management System",
-    des: "A role-based school management platform for admins, teachers, and parents. Features a full REST API backend (Spring Boot, Java), React/TypeScript frontend with MUI, JWT authentication, and PostgreSQL — developed in a team of 5 using Agile practices.",
+    des: "A multi-tenant school platform for admins, teachers and parents, built by a team of 5. My focus: DevOps, JWT auth, Spring Security and CI/CD.",
     img: "/p2-2.jpg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/kindergarten-app",
@@ -99,7 +99,7 @@ export const projects = [
   {
     id: 3,
     title: "SaaS Platform with Stripe Payments & Real-Time Chat",
-    des: "A full-stack SaaS platform with Stripe subscription payments, Firebase Firestore, and real-time multi-language chat translation. Features NextAuth authentication, Stripe webhooks, Zustand state management, and role-based access for free and pro tiers. Built with Next.js 13, TypeScript, Shadcn UI, and Tailwind CSS.",
+    des: "A SaaS platform with Stripe subscription billing, Firebase Firestore, and real-time multi-language chat translation.",
     img: "/p3-1.JPG",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/saas-translator-app",
@@ -108,7 +108,7 @@ export const projects = [
   {
     id: 4,
     title: "Meal Tracker Application",
-    des: "A full-stack meal tracking app with user authentication, calorie logging, image uploads via Cloudinary, and detailed reports with date filtering. Built with Node.js, Express, PostgreSQL, and React.",
+    des: "A full-stack meal-tracking app with token-based auth, calorie logging, Cloudinary image uploads, and date-filtered reports.",
     img: "/p4.JPG",
     iconLists: ["/re.svg", "/pg.svg", "/ts.svg", "/cloud.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/meal-tracker",
@@ -314,17 +314,17 @@ export const awards = [
 export const socialMedia = [
   {
     id: 1,
+    img: "/link.svg",
+    link: "https://www.linkedin.com/in/engr-idemudia/",
+  },
+  {
+    id: 2,
     img: "/git.svg",
     link: "https://github.com/engr-idemudia",
   },
   {
-    id: 2,
+    id: 3,
     img: "/twit.svg",
     link: "https://x.com/maximudia",
-  },
-  {
-    id: 3,
-    img: "/link.svg",
-    link: "https://www.linkedin.com/in/engr-idemudia/",
   },
 ];
