@@ -11,7 +11,7 @@ const Education = () => {
         <span className="text-purple">Certifications</span>
       </h1>
 
-      {/* Education — two columns, side by side like Experience */}
+      {/* Education — two per row, typography matched to Experience */}
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {education.map((item) => (
           <Button
@@ -26,19 +26,19 @@ const Education = () => {
             }}
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
-            <div className="flex flex-col p-3 py-6 md:p-5 lg:p-8">
+            <div className="flex flex-col w-full h-full p-3 py-6 md:p-5 lg:p-8">
               <p className="text-start text-purple text-sm font-semibold tracking-wide">
                 {item.period}
               </p>
-              <h1 className="text-start text-white text-lg md:text-xl font-bold mt-2">
+              <h1 className="text-start text-white text-xl md:text-2xl font-bold mt-2">
                 {item.degree}
               </h1>
-              <p className="text-start text-white-100 mt-2 font-semibold">
+              <p className="text-start text-white-100 text-base mt-3 font-semibold">
                 {item.institution}
                 {item.location ? ` · ${item.location}` : ""}
               </p>
               {item.note ? (
-                <p className="text-start text-white-100 opacity-80 mt-3 text-sm">
+                <p className="text-start text-white-100 text-base mt-3">
                   {item.note}
                 </p>
               ) : null}
@@ -47,7 +47,7 @@ const Education = () => {
         ))}
       </div>
 
-      {/* Certifications — two columns, side by side */}
+      {/* Certifications & training — two per row, matched typography */}
       <div className="w-full mt-10 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {certifications.map((item) => (
           <Button
@@ -62,13 +62,18 @@ const Education = () => {
             }}
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
-            <div className="flex flex-col p-3 py-6 md:p-5 lg:p-8">
-              <h1 className="text-start text-white text-lg md:text-xl font-bold">
+            <div className="flex flex-col w-full h-full p-3 py-6 md:p-5 lg:p-8">
+              <h1 className="text-start text-white text-xl md:text-2xl font-bold">
                 {item.name}
               </h1>
-              <p className="text-start text-white-100 mt-2 font-semibold">
+              <p className="text-start text-white-100 text-base mt-2 font-semibold">
                 {item.issuer} · {item.year}
               </p>
+              {item.note ? (
+                <p className="text-start text-white-100 text-base mt-3">
+                  {item.note}
+                </p>
+              ) : null}
             </div>
           </Button>
         ))}
