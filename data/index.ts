@@ -105,15 +105,6 @@ export const projects = [
     link: "https://github.com/engr-idemudia/saas-translator-app",
     liveLink: "https://translator.idemudia.dev",
   },
-  // {
-  //   id: 4,
-  //   title: "Meal Tracker Application",
-  //   des: "A full-stack backend application built with AdonisJS and MySQL. Features user authentication, meal tracking with calorie analysis, paginated meal history, reporting over time periods, and multi-language support including English, French, and Estonian.",
-  //   img: "/p4.svg",
-  //   iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
-  //   link: "https://github.com/engr-idemudia/Meal-Tracker-App",
-  //   liveLink: "",
-  // },
   {
     id: 4,
     title: "Meal Tracker Application",
@@ -191,8 +182,7 @@ export const companies = [
   },
 ];
 
-// Harmonised with the CV (Task 2): Freelance â Swappie â Zazuu â Ministry of Defence.
-// Agile Bootcamp removed from Experience; its Top 16/97 ranking moves to Awards (Task 2b).
+// Harmonised with the CV: Freelance → Swappie → Zazuu → Ministry of Defence.
 export const workExperience = [
   {
     id: 1,
@@ -224,10 +214,18 @@ export const workExperience = [
   },
 ];
 
-// ✅ NEW: Education — closes the 2020–2024 timeline gap (BSc EUAS 2020–2023)
+// Education & university programmes — newest first, forms a clean 2x2 grid
 export const education = [
   {
     id: 1,
+    degree: "From Junior Software Developer to Senior Developer",
+    institution: "Tallinn University of Technology (TalTech)",
+    location: "",
+    period: "2026",
+    note: "A 250-hour ICT specialists programme covering software architecture, automated testing, CI/CD and DevOps, version control, sprint planning, code quality, security, and mentoring junior developers.",
+  },
+  {
+    id: 2,
     degree: "BSc Software Development & Entrepreneurship",
     institution:
       "Estonian Entrepreneurship University of Applied Sciences (EUAS)",
@@ -236,7 +234,7 @@ export const education = [
     note: "Sole African graduate in the programme. Thesis on system architecture and application security.",
   },
   {
-    id: 2,
+    id: 3,
     degree: "BSc Mathematics & Computer Science",
     institution: "Rivers State University (RSU)",
     location: "Port Harcourt, Rivers State, Nigeria",
@@ -244,7 +242,7 @@ export const education = [
     note: "",
   },
   {
-    id: 3,
+    id: 4,
     degree: "National Diploma in Computer Engineering",
     institution: "University of Benin (UNIBEN)",
     location: "Benin City, Edo State, Nigeria",
@@ -253,19 +251,35 @@ export const education = [
   },
 ];
 
-// ✅ NEW: Certifications — surfaced and dated (year earned, not "currently active")
+// Certifications & training — full titles, dated by year earned, with descriptions
 export const certifications = [
   {
     id: 1,
-    name: "Certified Ethical Hacker (CEH)",
-    issuer: "EC-Council",
-    year: "2015",
+    name: "Agile Development Crash Course",
+    issuer: "AS Proekspert, Tallinn",
+    year: "2022",
+    note: "One-week intensive bootcamp spanning software engineering, QA, DevOps, Scrum, and agile practices (Java, JavaScript, React, Jira, Jenkins, Git, Docker), culminating in a team-built application (Kudos App).",
   },
   {
     id: 2,
-    name: "Fortinet NSE 1",
+    name: "Quality Assurance Industry Training",
+    issuer: "Brainnest, Germany",
+    year: "2022",
+    note: "Hands-on QA training (20 hours plus individual work) covering manual and automated testing with Jira, Qase, JMeter, and Postman.",
+  },
+  {
+    id: 3,
+    name: "Fortinet NSE 1 – Network Security Associate",
     issuer: "Fortinet",
     year: "2020",
+    note: "Foundational network-security certification covering the cybersecurity threat landscape and the core principles of network defence.",
+  },
+  {
+    id: 4,
+    name: "Certified Ethical Hacker (CEH)",
+    issuer: "EC-Council",
+    year: "2015",
+    note: "Professional certification in ethical-hacking and penetration-testing methodology, including reconnaissance, system and network security, and vulnerability assessment.",
   },
 ];
 
