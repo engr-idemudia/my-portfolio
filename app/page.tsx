@@ -4,6 +4,7 @@ import { navItems } from "@/data";
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import Footer from "@/components/Footer";
+import Awards from "@/components/Awards";
 import Clients from "@/components/Clients";
 import Approach from "@/components/Approach";
 import Education from "@/components/Education";
@@ -22,6 +23,7 @@ const Home = () => {
         <Clients />
         <Experience />
         <Education />
+        <Awards />
         <Approach />
         <Footer />
       </div>

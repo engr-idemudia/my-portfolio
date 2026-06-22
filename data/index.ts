@@ -283,6 +283,34 @@ export const certifications = [
   },
 ];
 
+// Awards & recognition — distinctions, newest first (2x2 grid)
+export const awards = [
+  {
+    id: 1,
+    title: "Sole African Graduate",
+    context: "EUAS — BSc Software Development & Entrepreneurship",
+    year: "2023",
+  },
+  {
+    id: 2,
+    title: "Top 16 of 97",
+    context: "Intensive Agile Development Bootcamp — AS Proekspert",
+    year: "2022",
+  },
+  {
+    id: 3,
+    title: "Top 200 of 3,300",
+    context: "GO-Reloaded Selection Sprint — Kood/Jõhvi, Estonia",
+    year: "2021",
+  },
+  {
+    id: 4,
+    title: "Best All-Round Student",
+    context: "Nigerian Army School of Electronics",
+    year: "2009 & 2011",
+  },
+];
+
 export const socialMedia = [
   {
     id: 1,
