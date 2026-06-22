@@ -191,6 +191,9 @@ export const companies = [
   },
 ];
 
+// NOTE: Work experience is harmonised with the CV in Task 2
+// (adds Swappie 2022–2024, relocates the Agile Bootcamp to Training,
+// reorders to reverse-chronological). Left unchanged here on purpose.
 export const workExperience = [
   {
     id: 1,
@@ -219,6 +222,51 @@ export const workExperience = [
     desc: "Monitored mission-critical RADAR and IT infrastructure systems. Diagnosed hardware and software failures, implemented system upgrades, security monitoring procedures, and maintained technical documentation for operational teams.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
+  },
+];
+
+// ✅ NEW: Education — closes the 2020–2024 timeline gap (BSc EUAS 2020–2023)
+export const education = [
+  {
+    id: 1,
+    degree: "BSc Software Development & Entrepreneurship",
+    institution:
+      "Estonian Entrepreneurship University of Applied Sciences (EUAS)",
+    location: "Tallinn, Estonia",
+    period: "2020 – 2023",
+    note: "Sole African graduate in the programme. Thesis on system architecture and application security.",
+  },
+  {
+    id: 2,
+    degree: "BSc Mathematics & Computer Science",
+    institution: "Rivers State University (RSU)",
+    location: "Port Harcourt, Rivers State, Nigeria",
+    period: "2011 – 2014",
+    note: "",
+  },
+  {
+    id: 3,
+    degree: "National Diploma in Computer Engineering",
+    institution: "University of Benin (UNIBEN)",
+    location: "Benin City, Edo State, Nigeria",
+    period: "2004 – 2006",
+    note: "",
+  },
+];
+
+// ✅ NEW: Certifications — surfaced and dated (year earned, not "currently active")
+export const certifications = [
+  {
+    id: 1,
+    name: "Certified Ethical Hacker (CEH)",
+    issuer: "EC-Council",
+    year: "2015",
+  },
+  {
+    id: 2,
+    name: "Fortinet NSE 1",
+    issuer: "Fortinet",
+    year: "2020",
   },
 ];
 
