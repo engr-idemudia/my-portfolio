@@ -191,35 +191,34 @@ export const companies = [
   },
 ];
 
-// NOTE: Work experience is harmonised with the CV in Task 2
-// (adds Swappie 2022–2024, relocates the Agile Bootcamp to Training,
-// reorders to reverse-chronological). Left unchanged here on purpose.
+// Harmonised with the CV (Task 2): Freelance â Swappie â Zazuu â Ministry of Defence.
+// Agile Bootcamp removed from Experience; its Top 16/97 ranking moves to Awards (Task 2b).
 export const workExperience = [
   {
     id: 1,
     title: "Freelance Software Engineer (2024–present)",
-    desc: "Delivering custom backend and full-stack solutions with a focus on security, scalability, and clean architecture. Work includes REST API development, third-party integrations, and frontend builds using Node.js, React, TypeScript, and Next.js.",
+    desc: "Design, build, and deploy full-stack web applications for clients, with a focus on performance, security, and maintainability. Integrate third-party REST APIs and payment gateways, apply secure authentication and input validation, and manage delivery end-to-end — requirements, sprint planning, testing, and deployment. Stack: Node.js, React, TypeScript, and Next.js.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Junior Software Engineer – Zazuu Financial Services (2019–2020)",
-    desc: "Developed backend features supporting cross-border payment systems. Integrated financial APIs enabling secure digital payment processing. Debugged software defects, supported QA testing, and collaborated with product teams to improve system performance.",
-    className: "md:col-span-2",
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 3,
-    title: "Agile Development Bootcamp – AS Proekspert (2022)",
-    desc: "Contributed to full-stack web application development across UI design, database schema, CI/CD pipelines, API testing, and sprint grooming. Ranked in the top 16 of 97 participants in a competitive code screening.",
+    title: "Senior Production Specialist – Eippa WS / Swappie (2022–2024)",
+    desc: "Diagnosed, tested, and reactivated iOS devices using specialised tools (2uTool, 3uTool, Blancco) to strict quality standards. Worked within Agile workflows, consistently meeting throughput targets and quality-control metrics, while providing technical support and coordinating logistics across device distribution pipelines.",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
+    id: 3,
+    title: "Junior Software Engineer – Zazuu Financial Services (2019–2020)",
+    desc: "Developed and optimised cross-border payment features for a London-based fintech (remote), improving transaction throughput for African markets. Integrated local payment APIs to extend coverage across several African countries, implemented measures to safeguard transactions and reduce fraud, and shipped features on schedule alongside product managers and senior engineers in an Agile team.",
+    className: "md:col-span-2",
+    thumbnail: "/exp3.svg",
+  },
+  {
     id: 4,
     title: "IT Support & Systems Engineer – Ministry of Defence (2007–2019)",
-    desc: "Monitored mission-critical RADAR and IT infrastructure systems. Diagnosed hardware and software failures, implemented system upgrades, security monitoring procedures, and maintained technical documentation for operational teams.",
+    desc: "Maintained and monitored mission-critical RADAR and IT infrastructure, ensuring continuous operational availability. Diagnosed and resolved complex hardware and software faults to minimise downtime in high-stakes environments, performed system upgrades, security patching, and configuration management, and improved reliability through proactive monitoring and fault analysis.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
