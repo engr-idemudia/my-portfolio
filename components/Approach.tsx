@@ -22,7 +22,7 @@ const Approach = () => {
   }, [step, paused]);
 
   return (
-    <section className="w-full py-10 md:py-20">
+    <section id="approach" className="w-full py-10 md:py-20">
       <h1 className="heading">
         My <span className="text-purple">approach</span> to{" "}
         <span className="text-purple">work</span>
