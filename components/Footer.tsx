@@ -23,8 +23,8 @@ const Footer = () => {
           <span className="text-purple">together?</span>
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          I am open to new opportunities in backend engineering, fintech, and IT
-          security. Let&apos;s connect and explore how I can add value to your
+          I am open to new opportunities across software engineering — backend, full-stack, and
+          security. Let&apos;s connect and explore how I can contribute to your
           team.
         </p>
         <a href="mailto:admin@idemudia.dev">
