@@ -7,11 +7,12 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Idemudia M. Osaghae | Backend Software Engineer",
+  title: "Idemudia M. Osaghae | Software Engineer — Backend & Full-Stack",
   description:
-    "Backend Software Engineer based in Tallinn, Estonia, specialising in fintech systems, application security, and scalable REST APIs. Open to remote, onsite, and hybrid roles.",
+    "Software Engineer based in Tallinn, Estonia, working across backend and full-stack development with a focus on fintech, application security, and clean, scalable architecture. Open to remote, onsite, and hybrid roles.",
   keywords: [
     "Backend Engineer",
+    "Full-Stack Developer",
     "Software Engineer Tallinn",
     "Fintech Developer",
     "Node.js Developer",
@@ -26,9 +27,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Idemudia M. Osaghae | Backend Software Engineer",
+    title: "Idemudia M. Osaghae | Software Engineer — Backend & Full-Stack",
     description:
-      "Backend Software Engineer specialising in fintech, security, and scalable systems. Based in Tallinn, Estonia.",
+      "Software Engineer working across backend and full-stack development. Fintech and application security focus. Based in Tallinn, Estonia.",
     url: "https://www.idemudia.dev",
     siteName: "Idemudia M. Osaghae Portfolio",
     locale: "en_GB",
@@ -36,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Idemudia M. Osaghae | Backend Software Engineer",
+    title: "Idemudia M. Osaghae | Software Engineer — Backend & Full-Stack",
     description:
-      "Backend Software Engineer specialising in fintech, security, and scalable systems. Based in Tallinn, Estonia.",
+      "Software Engineer working across backend and full-stack development. Fintech and application security focus. Based in Tallinn, Estonia.",
   },
 };
 
