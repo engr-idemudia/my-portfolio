@@ -180,6 +180,24 @@ export const companies = [
     img: "/firebase.svg",
     nameImg: "/firebaseName.svg",
   },
+  {
+    id: 7,
+    name: "render",
+    img: "/render.svg",
+    nameImg: "/renderName.svg",
+  },
+  {
+    id: 8,
+    name: "netlify",
+    img: "/netlify.svg",
+    nameImg: "/netlifyName.svg",
+  },
+  {
+    id: 9,
+    name: "githubactions",
+    img: "/githubactions.svg",
+    nameImg: "/githubactionsName.svg",
+  },
 ];
 
 // Harmonised with the CV: Freelance → Swappie → Zazuu → Ministry of Defence.
