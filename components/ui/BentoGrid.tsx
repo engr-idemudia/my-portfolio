@@ -49,8 +49,12 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["Java", "Python", "JavaScript", "TypeScript", "ReactJS"];
-  const rightLists = ["SpringBoot", "Node.JS", "Next.JS", "SQL", "REST APIs"];
+  const techStackColumns = [
+    ["Java", "TypeScript", "JavaScript", "Python"],
+    ["Spring Boot", "Node.js", "Next.js", "React"],
+    ["PostgreSQL", "MySQL", "MongoDB"],
+    ["Docker", "Render", "CI/CD", "Vercel"],
+  ];
 
   const [copied, setCopied] = useState(false);
 
@@ -137,8 +141,9 @@ export const BentoGridItem = ({
             id !== 1 && "group-hover/bento:translate-x-2",
             // Card 2 (globe): anchored top-left, tight padding
             id === 2 && "!justify-end !items-start !p-2 !px-2",
-            // Card 3 (tech stack): right padding so title clears the pill columns
-            id === 3 && "!pr-24 sm:!pr-28 lg:!pr-0",
+            // Card 3 (tech stack): title row across the top, pills fill below
+            id === 3 &&
+              "!flex-row !flex-wrap !items-baseline !justify-start gap-x-2 !p-4 lg:!p-5",
             // Card 5 (code snippet): push text to bottom-left, leave right side for code
             id === 5 && "!justify-start !pt-4 !pl-4 !pr-4",
           )}
@@ -149,6 +154,7 @@ export const BentoGridItem = ({
               "font-sans font-extralight text-xs md:text-xs lg:text-sm text-[#C1C2D3] z-10",
               id === 1 && "!text-white !opacity-100",
               id === 2 && "!text-[9px]",
+              id === 3 && "whitespace-nowrap",
               // Card 5: constrain to left half so it doesn't cover the code
               id === 5 &&
                 "text-xs md:text-xs lg:text-sm max-w-[38%] md:max-w-full lg:max-w-[45%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
@@ -170,9 +176,13 @@ export const BentoGridItem = ({
               // Card 5: constrained left half, frosted bg, subtle right accent border
               id === 5 &&
                 "text-xs sm:text-sm md:text-base lg:text-xl max-w-[38%] md:max-w-full lg:max-w-[35%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
-              // All other cards (3, 4, 6)
+              // Card 3 (tech stack): single horizontal line, no width clamp
+              id === 3 &&
+                "text-sm sm:text-base lg:text-xl !max-w-none whitespace-nowrap",
+              // All other cards (4, 6)
               id !== 1 &&
                 id !== 2 &&
+                id !== 3 &&
                 id !== 5 &&
                 id !== 6 &&
                 "text-xs sm:text-sm md:text-base lg:text-2xl max-w-[55%] !items-start !justify-start",
@@ -191,31 +201,21 @@ export const BentoGridItem = ({
             </>
           )}
 
-          {/* Card 3 — Tech stack pills */}
+          {/* Card 3 — Tech stack pills (four columns, centred below the title) */}
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute right-2 lg:right-4">
-              <div className="flex flex-col gap-2 md:gap-2 lg:gap-3">
-                {leftLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-2 lg:px-3 py-1 px-2 text-[10px] lg:text-sm rounded-lg text-center bg-[#10132E] border border-[#CBACF9]/30 hover:border-[#CBACF9] transition duration-200"
-                  >
-                    {item}
-                  </span>
-                ))}
-                <span className="lg:py-1 lg:px-3 py-1 px-2 rounded-lg text-center bg-[#10132E]"></span>
-              </div>
-              <div className="flex flex-col gap-2 md:gap-2 lg:gap-3">
-                <span className="lg:py-1 lg:px-3 py-1 px-2 rounded-lg text-center bg-[#10132E]"></span>
-                {rightLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-2 lg:px-3 py-1 px-2 text-[10px] lg:text-sm rounded-lg text-center bg-[#10132E] border border-[#CBACF9]/30 hover:border-[#CBACF9] transition duration-200"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
+            <div className="absolute inset-x-4 lg:inset-x-5 top-14 lg:top-16 bottom-4 lg:bottom-5 grid grid-cols-4 content-center gap-x-1.5 lg:gap-x-3 z-10">
+              {techStackColumns.map((column, ci) => (
+                <div key={ci} className="flex flex-col gap-1.5 lg:gap-2.5">
+                  {column.map((item, i) => (
+                    <span
+                      key={i}
+                      className="py-1 px-1.5 lg:py-2 lg:px-3 text-[8px] sm:text-[10px] lg:text-sm leading-tight rounded-lg text-center bg-[#10132E] border border-[#CBACF9]/30 hover:border-[#CBACF9] transition duration-200 whitespace-nowrap"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              ))}
             </div>
           )}
 
