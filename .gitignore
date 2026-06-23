@@ -38,4 +38,5 @@ jspm_packages
 .next
 
 .env.sentry-build-plugin
-.DS_Storeout/
+.DS_Store
+out/
