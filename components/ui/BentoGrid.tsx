@@ -103,7 +103,7 @@ export const BentoGridItem = ({
 
         {/* Card 1: gradient fade at bottom so text is always readable */}
         {id === 1 && (
-          <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-[rgba(4,7,29,0.97)] via-[rgba(4,7,29,0.55)] to-transparent z-10 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-3/5 bg-gradient-to-t from-[rgba(4,7,29,1)] via-[rgba(4,7,29,0.85)] to-transparent z-10 pointer-events-none" />
         )}
 
         {/* Spare image (card 4 and card 5) */}

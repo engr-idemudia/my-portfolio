@@ -54,7 +54,7 @@ export const gridItems = [
     id: 5,
     // ✅ UPDATED: Replaced false template text with accurate current project
     title:
-      "Currently building a full-stack fintech banking platform with real-time transactions",
+      "Currently building full-stack web applications with secure authentication and real-time features",
     description: "What I'm working on",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-[32rem] w-56",
