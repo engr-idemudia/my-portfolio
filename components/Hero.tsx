@@ -98,8 +98,9 @@ const Hero = () => {
             />
             <p className="text-center md:tracking-wider text-sm md:text-lg lg:text-2xl">
               Hi, I&apos;m Idemudia — a Software Engineer based in Tallinn,
-              Estonia, working across backend and full-stack development, with a
-              strong interest in security and clean architecture.
+              Estonia. I build secure, full-stack applications with a focus on
+              backend and application security, bringing a defensive mindset
+              from over a decade keeping mission-critical systems running.
             </p>
           </div>
 
