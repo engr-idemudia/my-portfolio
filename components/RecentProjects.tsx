@@ -11,7 +11,7 @@ const RecentProjects = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   return (
-    <div className="py-20" id="projects">
+    <div className="py-10 md:py-20" id="projects">
       <h1 className="heading">
         <span className="text-purple">A</span> small{" "}
         <span className="text-purple">selection</span> of{" "}

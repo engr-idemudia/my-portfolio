@@ -5,7 +5,7 @@ import { Button } from "./ui/MovingBorders";
 
 const Awards = () => {
   return (
-    <div className="py-20 w-full" id="awards">
+    <div className="py-10 md:py-20 w-full" id="awards">
       <h1 className="heading">
         <span className="text-purple">Awards</span> &{" "}
         <span className="text-purple">Recognition</span>
