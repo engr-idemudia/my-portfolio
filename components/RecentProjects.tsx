@@ -81,7 +81,7 @@ const RecentProjects = () => {
                   {item.demoVideo ? (
                     <button
                       onClick={() => setActiveVideo(item.demoVideo!)}
-                      className="text-sm md:text-xs lg:text-xl text-purple hover:underline flex items-center whitespace-nowrap"
+                      className="text-sm md:text-xs lg:text-xl text-purple hover:underline flex items-center"
                     >
                       Live Demo
                       <FaLocationArrow className="ms-2" color="#CBACF9" />
@@ -92,7 +92,7 @@ const RecentProjects = () => {
                         href={item.liveLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm md:text-xs lg:text-xl text-purple hover:underline flex items-center whitespace-nowrap"
+                        className="text-sm md:text-xs lg:text-xl text-purple hover:underline flex items-center"
                       >
                         Live Demo
                         <FaLocationArrow className="ms-2" color="#CBACF9" />
@@ -104,7 +104,7 @@ const RecentProjects = () => {
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm md:text-xs lg:text-xl text-purple hover:underline flex items-center whitespace-nowrap"
+                    className="text-sm md:text-xs lg:text-xl text-purple hover:underline flex items-center"
                   >
                     GitHub
                     <FaLocationArrow className="ms-2" color="#CBACF9" />
