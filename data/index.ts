@@ -81,7 +81,7 @@ export const projects = [
     title: "NextBank – Fintech Banking Platform",
     des: "A full-stack banking platform: multi-bank linking via Plaid, peer-to-peer transfers via Dwolla, and real-time transaction tracking.",
     img: "/nextbank.jpg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/app.svg", "/c.svg"],
+    iconLists: ["/next.svg", "/re.svg", "/ts.svg", "/tail.svg", "/app.svg", "/plaid.svg", "/dwolla.svg", "/chartjs.svg", "/vercel.svg"],
     link: "https://github.com/engr-idemudia/NextBank",
     liveLink: "https://nextbank.idemudia.dev",
     demoVideo: "/demos/nextbank-demo",
