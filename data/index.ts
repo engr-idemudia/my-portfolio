@@ -200,6 +200,18 @@ export const companies = [
     img: "/githubactions.svg",
     nameImg: "/githubactionsName.svg",
   },
+  {
+    id: 10,
+    name: "railway",
+    img: "/railway.svg",
+    nameImg: "/railwayName.svg",
+  },
+  {
+    id: 11,
+    name: "cloudinary",
+    img: "/cloudinary.svg",
+    nameImg: "/cloudinaryName.svg",
+  },
 ];
 
 // Harmonised with the CV: Freelance → Swappie → Zazuu → Ministry of Defence.
