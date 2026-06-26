@@ -23,17 +23,21 @@ const VideoModal = ({ src, onClose }: VideoModalProps) => {
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-6xl"
+        className="relative inline-block max-w-[90vw] max-h-[85vh]"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute -top-10 right-0 text-white text-2xl hover:text-purple"
+          className="absolute top-2 right-2 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white text-lg hover:bg-purple"
           aria-label="Close video"
         >
           ✕
         </button>
-        <video controls autoPlay className="w-full rounded-xl">
+        <video
+          controls
+          autoPlay
+          className="block w-auto h-auto max-w-[90vw] max-h-[85vh] rounded-xl"
+        >
           <source src={`${src}.webm`} type="video/webm" />
           <source src={`${src}.mp4`} type="video/mp4" />
           Your browser does not support the video tag.
