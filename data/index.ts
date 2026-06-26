@@ -100,10 +100,11 @@ export const projects = [
     id: 3,
     title: "SaaS Platform with Stripe Payments & Real-Time Chat",
     des: "A SaaS platform with Stripe subscription billing, Firebase Firestore, and real-time multi-language chat translation.",
-    img: "/p3-1.JPG",
+    img: "/p3-1.jpg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/saas-translator-app",
     liveLink: "https://translator.idemudia.dev",
+    demoVideo: "/demos/saas-translator-demo",
   },
   {
     id: 4,
