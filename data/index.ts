@@ -110,10 +110,11 @@ export const projects = [
     id: 4,
     title: "Meal Tracker Application",
     des: "A full-stack meal-tracking app with token-based auth, calorie logging, Cloudinary image uploads, and date-filtered reports.",
-    img: "/p4.JPG",
+    img: "/p4.jpg",
     iconLists: ["/re.svg", "/pg.svg", "/ts.svg", "/cloud.svg", "/c.svg"],
     link: "https://github.com/engr-idemudia/meal-tracker",
     liveLink: "https://meal-tracker.idemudia.dev",
+    demoVideo: "/demos/meal-tracker-demo",
   },
 ];
 
