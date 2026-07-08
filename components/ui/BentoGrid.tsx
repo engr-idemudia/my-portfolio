@@ -2,7 +2,9 @@ import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import { FaLock, FaShieldAlt, FaDatabase } from "react-icons/fa";
 
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 import { cn } from "@/lib/utils";
 
@@ -58,14 +60,14 @@ export const BentoGridItem = ({
 
   const [copied, setCopied] = useState(false);
 
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptions = {
+  //   loop: copied,
+  //   autoplay: copied,
+  //   animationData: animationData,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
 
   const handleCopy = () => {
     const text = "admin@idemudia.dev";
@@ -245,7 +247,14 @@ export const BentoGridItem = ({
                   copied ? "block" : "block"
                 }`}
               >
-                <Lottie options={defaultOptions} height={200} width={400} />
+                {copied && (
+                  <Lottie
+                    animationData={animationData}
+                    loop={false}
+                    autoplay
+                    style={{ height: 200, width: 400 }}
+                  />
+                )}
               </div>
 
               <MagicButton
