@@ -3,6 +3,7 @@ export const navItems = [
   { name: "Projects", link: "#projects" },
   { name: "Experience", link: "#experience" },
   { name: "Testimonials", link: "#testimonials" },
+  { name: "Approach", link: "#approach" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -101,7 +102,13 @@ export const projects = [
     title: "SaaS Platform with Stripe Payments & Real-Time Chat",
     des: "A SaaS platform with Stripe subscription billing, Firebase Firestore, and real-time multi-language chat translation.",
     img: "/p3-1.jpg",
-    iconLists: ["/next.svg", "/ts.svg", "/tail.svg", "/firebase.svg", "/stripe.svg"],
+    iconLists: [
+      "/next.svg",
+      "/ts.svg",
+      "/tail.svg",
+      "/firebase.svg",
+      "/stripe.svg",
+    ],
     link: "https://github.com/engr-idemudia/saas-translator-app",
     liveLink: "https://translator.idemudia.dev",
     demoVideo: "/demos/saas-translator-demo",
@@ -232,7 +239,7 @@ export const workExperience = [
   },
   {
     id: 3,
-    title: "Junior Software Engineer – Zazuu Financial Services (2019–2020)",
+    title: "Junior Software Engineer – Zazuu Financial Services (2019–2021)",
     desc: "Developed and optimised cross-border payment features for a London-based fintech (remote), improving transaction throughput for African markets. Integrated local payment APIs to extend coverage across several African countries, implemented measures to safeguard transactions and reduce fraud, and shipped features on schedule alongside product managers and senior engineers in an Agile team.",
     className: "md:col-span-2",
     thumbnail: "/exp3.svg",
@@ -252,7 +259,7 @@ export const education = [
     id: 1,
     degree: "From Junior Software Developer to Senior Developer",
     institution: "Tallinn University of Technology (TalTech)",
-    location: "",
+    location: "Tallinn, Estonia",
     period: "2026",
     note: "A 250-hour ICT specialists programme covering software architecture, automated testing, CI/CD and DevOps, version control, sprint planning, code quality, security, and mentoring junior developers.",
   },
@@ -268,8 +275,8 @@ export const education = [
   {
     id: 3,
     degree: "BSc Mathematics & Computer Science",
-    institution: "Rivers State University (RSU)",
-    location: "Port Harcourt, Rivers State, Nigeria",
+    institution: "Rivers State University of Science and Technology (RSUST)",
+    location: "PortHarcourt, Rivers State, Nigeria",
     period: "2011 – 2014",
     note: "",
   },
@@ -295,7 +302,7 @@ export const certifications = [
   {
     id: 2,
     name: "Quality Assurance Industry Training",
-    issuer: "Brainnest, Germany",
+    issuer: "Brainnest, Germany. (Online)",
     year: "2022",
     note: "Hands-on QA training (20 hours plus individual work) covering manual and automated testing with Jira, Qase, JMeter, and Postman.",
   },

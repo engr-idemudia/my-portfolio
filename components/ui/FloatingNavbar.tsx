@@ -24,12 +24,6 @@ export const FloatingNav = ({
   const [visible, setVisible] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const mobileExtraItems = [
-    { name: "Education", link: "#education" },
-    { name: "Awards", link: "#awards" },
-    { name: "Approach", link: "#approach" },
-  ];
-
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
       let direction = current - scrollYProgress.getPrevious()!;
@@ -50,7 +44,7 @@ export const FloatingNav = ({
         className={cn(
           "fixed z-[5000] top-4 sm:top-10 inset-x-0 mx-auto px-4 sm:px-8 md:px-10 py-2 sm:py-5 rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]",
           "w-[92vw] sm:w-auto sm:max-w-fit md:min-w-[70vw] lg:min-w-fit",
-          className
+          className,
         )}
         style={{
           backdropFilter: "blur(16px) saturate(180%)",
@@ -85,12 +79,34 @@ export const FloatingNav = ({
             aria-label="Toggle menu"
           >
             {menuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             )}
           </button>
@@ -99,7 +115,7 @@ export const FloatingNav = ({
         {/* Mobile dropdown — all sections */}
         {menuOpen && (
           <div className="flex sm:hidden flex-col mt-3 gap-3 pb-1">
-            {[...navItems, ...mobileExtraItems].map((navItem, idx) => (
+            {navItems.map((navItem, idx) => (
               <Link
                 key={idx}
                 href={navItem.link}
