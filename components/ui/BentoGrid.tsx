@@ -254,7 +254,7 @@ export const BentoGridItem = ({
                     autoplay
                     style={{ height: 200, width: 400 }}
                   />
-                )}
+                )}code ~/dev/my-portfolio/components/ui/Globe.tsx
               </div>
 
               <MagicButton
