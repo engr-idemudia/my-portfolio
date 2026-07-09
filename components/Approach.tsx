@@ -109,19 +109,14 @@ const Card = ({
       <Icon className="absolute h-10 w-10 -top-3 -right-3 dark:text-white text-black opacity-30" />
       <Icon className="absolute h-10 w-10 -bottom-3 -right-3 dark:text-white text-black opacity-30" />
 
-      <AnimatePresence>
-        {show && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="h-full w-full absolute inset-0"
-          >
-            {children}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <motion.div
+        initial={false}
+        animate={{ opacity: show ? 1 : 0 }}
+        transition={{ duration: 0.4 }}
+        className="h-full w-full absolute inset-0 pointer-events-none"
+      >
+        {children}
+      </motion.div>
 
       <div className="relative z-20 px-4 sm:px-6 md:px-10 flex flex-col items-center justify-center text-center">
         <div className="min-w-40 mx-auto flex items-center justify-center">
