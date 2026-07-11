@@ -82,7 +82,7 @@ const Hero = () => {
           </div>
 
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-[80vw] sm:max-w-none sm:whitespace-nowrap">
-            Software Engineer · Backend · Full-Stack · Fintech · Security
+            Software Engineer · Full-Stack · Backend · Fintech · Security
           </p>
 
           <TextGenerateEffect

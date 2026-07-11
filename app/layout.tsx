@@ -7,10 +7,11 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Idemudia M. Osaghae | Software Engineer — Backend & Full-Stack",
+  title: "Idemudia M. Osaghae | Software Engineer — Full-Stack & Backend",
   description:
     "Software Engineer based in Tallinn, Estonia, working across backend and full-stack development with a focus on fintech, application security, and clean, scalable architecture. Open to remote, onsite, and hybrid roles.",
   keywords: [
+    "Full-Stack Developer",
     "Backend Engineer",
     "Full-Stack Developer",
     "Software Engineer Tallinn",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Idemudia M. Osaghae | Software Engineer — Backend & Full-Stack",
+    title: "Idemudia M. Osaghae | Software Engineer — Full-Stack & Backend",
     description:
       "Software Engineer working across backend and full-stack development. Fintech and application security focus. Based in Tallinn, Estonia.",
     url: "https://www.idemudia.dev",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Idemudia M. Osaghae | Software Engineer — Backend & Full-Stack",
+    title: "Idemudia M. Osaghae | Software Engineer — Full-Stack & Backend",
     description:
       "Software Engineer working across backend and full-stack development. Fintech and application security focus. Based in Tallinn, Estonia.",
     images: ["/og-image.png"],
