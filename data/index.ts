@@ -361,9 +361,4 @@ export const socialMedia = [
     img: "/git.svg",
     link: "https://github.com/engr-idemudia",
   },
-  {
-    id: 3,
-    img: "/twit.svg",
-    link: "https://x.com/maximudia",
-  },
 ];
