@@ -34,12 +34,21 @@ export const metadata: Metadata = {
     siteName: "Idemudia M. Osaghae Portfolio",
     locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Idemudia M. Osaghae — Software Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Idemudia M. Osaghae | Software Engineer — Backend & Full-Stack",
     description:
       "Software Engineer working across backend and full-stack development. Fintech and application security focus. Based in Tallinn, Estonia.",
+    images: ["/og-image.png"],
   },
 };
 
