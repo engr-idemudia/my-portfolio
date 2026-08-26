@@ -315,8 +315,8 @@ export const certifications = [
   },
   {
     id: 4,
-    name: "Certified Ethical Hacker (CEH)",
-    issuer: "EC-Council",
+    name: "Certified Ethical Hacker (CEH) Course",
+    issuer: "New Horizons - affiliated to EC-Council",
     year: "2015",
     note: "Professional certification in ethical-hacking and penetration-testing methodology, including reconnaissance, system and network security, and vulnerability assessment.",
   },
