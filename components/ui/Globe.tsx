@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
 import { useThree, ThreeElement, Canvas, extend } from "@react-three/fiber";
@@ -91,14 +91,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     ...globeConfig,
   };
 
-  useEffect(() => {
-    if (globeRef.current) {
-      _buildData();
-      _buildMaterial();
-    }
-  }, [globeRef.current]);
-
-  const _buildMaterial = () => {
+  function _buildMaterial() {
     if (!globeRef.current) return;
 
     const globeMaterial = globeRef.current.globeMaterial() as unknown as {
@@ -111,9 +104,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
     globeMaterial.emissive = new Color(globeConfig.emissive);
     globeMaterial.emissiveIntensity = globeConfig.emissiveIntensity || 0.1;
     globeMaterial.shininess = globeConfig.shininess || 0.9;
-  };
+  }
 
-  const _buildData = () => {
+  function _buildData() {
     const arcs = data;
     let points = [];
     for (let i = 0; i < arcs.length; i++) {
@@ -146,25 +139,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
     );
 
     setGlobeData(filteredPoints);
-  };
+  }
 
-  useEffect(() => {
-    if (globeRef.current && globeData) {
-      globeRef.current
-        .hexPolygonsData(countries.features)
-        .hexPolygonResolution(3)
-        .hexPolygonMargin(0.7)
-        .showAtmosphere(defaultProps.showAtmosphere)
-        .atmosphereColor(defaultProps.atmosphereColor)
-        .atmosphereAltitude(defaultProps.atmosphereAltitude)
-        .hexPolygonColor((e) => {
-          return defaultProps.polygonColor;
-        });
-      startAnimation();
-    }
-  }, [globeData]);
-
-  const startAnimation = () => {
+  function startAnimation() {
     if (!globeRef.current || !globeData) return;
 
     globeRef.current
@@ -200,7 +177,32 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .ringRepeatPeriod(
         (defaultProps.arcTime * defaultProps.arcLength) / defaultProps.rings,
       );
-  };
+  }
+
+  useEffect(() => {
+    if (globeRef.current) {
+      _buildData();
+      _buildMaterial();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (globeRef.current && globeData) {
+      globeRef.current
+        .hexPolygonsData(countries.features)
+        .hexPolygonResolution(3)
+        .hexPolygonMargin(0.7)
+        .showAtmosphere(defaultProps.showAtmosphere)
+        .atmosphereColor(defaultProps.atmosphereColor)
+        .atmosphereAltitude(defaultProps.atmosphereAltitude)
+        .hexPolygonColor((e) => {
+          return defaultProps.polygonColor;
+        });
+      startAnimation();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [globeData]);
 
   useEffect(() => {
     if (!globeRef.current || !globeData) return;
@@ -221,7 +223,8 @@ export function Globe({ globeConfig, data }: WorldProps) {
     return () => {
       clearInterval(interval);
     };
-  }, [globeRef.current, globeData]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [globeData]);
 
   return (
     <>
@@ -234,9 +237,10 @@ export function WebGLRendererConfig() {
   const { gl, size } = useThree();
 
   useEffect(() => {
-    gl.setPixelRatio(window.devicePixelRatio);
+    gl.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return null;
@@ -244,10 +248,35 @@ export function WebGLRendererConfig() {
 
 export function World(props: WorldProps) {
   const { globeConfig } = props;
-  const scene = new Scene();
-  scene.fog = new Fog(0xffffff, 400, 2000);
+
+  // Create the scene and camera once, not on every render. Recreating them on
+  // each resize is what made R3F rebuild the WebGL context and storm.
+  const scene = useMemo(() => {
+    const s = new Scene();
+    s.fog = new Fog(0xffffff, 400, 2000);
+    return s;
+  }, []);
+
+  const camera = useMemo(
+    () => new PerspectiveCamera(50, aspect, 180, 1800),
+    [],
+  );
+
   return (
-    <Canvas scene={scene} camera={new PerspectiveCamera(50, aspect, 180, 1800)}>
+    <Canvas
+      scene={scene}
+      camera={camera}
+      dpr={[1, 2]}
+      onCreated={({ gl }) => {
+        // If the WebGL context is ever lost (rotation, aggressive resize),
+        // recover gracefully instead of failing repeatedly.
+        gl.domElement.addEventListener(
+          "webglcontextlost",
+          (e) => e.preventDefault(),
+          false,
+        );
+      }}
+    >
       <WebGLRendererConfig />
       <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
       <directionalLight

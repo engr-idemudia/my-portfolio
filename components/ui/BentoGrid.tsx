@@ -52,10 +52,10 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const techStackColumns = [
-    ["Java", "TypeScript", "JavaScript", "Python"],
-    ["Spring Boot", "Node.js", "Next.js", "React"],
-    ["PostgreSQL", "MySQL", "MongoDB"],
-    ["Docker", "Render", "CI/CD", "Vercel"],
+    ["TypeScript", "Node.js", "PostgreSQL"],
+    ["JavaScript", "Next.js", "MySQL"],
+    ["Java", "Spring Boot", "MongoDB"],
+    ["Python", "React"],
   ];
 
   const [copied, setCopied] = useState(false);
@@ -143,9 +143,9 @@ export const BentoGridItem = ({
             id !== 1 && "group-hover/bento:translate-x-2",
             // Card 2 (globe): anchored top-left, tight padding
             id === 2 && "!justify-end !items-start !p-2 !px-2",
-            // Card 3 (tech stack): title row across the top, pills fill below
+            // Card 3 (tech stack): heading and subtitle on one centred line
             id === 3 &&
-              "!flex-row !flex-wrap !items-baseline !justify-start gap-x-2 !p-4 lg:!p-5",
+              "!flex-row !flex-nowrap !items-baseline !justify-center gap-x-2 !p-4 lg:!p-5",
             // Card 5 (code snippet): push text to bottom-left, leave right side for code
             id === 5 && "!justify-start !pt-4 !pl-4 !pr-4",
           )}
@@ -156,7 +156,7 @@ export const BentoGridItem = ({
               "font-sans font-extralight text-xs md:text-xs lg:text-sm text-[#C1C2D3] z-10",
               id === 1 && "!text-white !opacity-100",
               id === 2 && "!text-[9px]",
-              id === 3 && "whitespace-nowrap",
+              id === 3 && "order-2 whitespace-nowrap",
               // Card 5: constrain to left half so it doesn't cover the code
               id === 5 &&
                 "text-xs md:text-xs lg:text-sm max-w-[38%] md:max-w-full lg:max-w-[45%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
@@ -180,7 +180,7 @@ export const BentoGridItem = ({
                 "text-xs sm:text-sm md:text-base lg:text-xl max-w-[38%] md:max-w-full lg:max-w-[35%] bg-[rgba(4,7,29,0.8)] backdrop-blur-sm rounded-xl p-2 border-r-2 border-purple-500/40",
               // Card 3 (tech stack): single horizontal line, no width clamp
               id === 3 &&
-                "text-sm sm:text-base lg:text-xl !max-w-none whitespace-nowrap",
+                "order-1 text-sm sm:text-base lg:text-xl !max-w-none whitespace-nowrap",
               // All other cards (4, 6)
               id !== 1 &&
                 id !== 2 &&

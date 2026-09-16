@@ -29,13 +29,13 @@ const Clients = () => {
                 <img
                   src={company.img}
                   alt={company.name}
-                  className="md:w-10 w-5"
+                  className="md:w-10 w-5 h-auto"
                 />
                 <img
                   src={company.nameImg}
                   alt={company.name}
                   width={company.id === 4 || company.id === 5 ? 100 : 150}
-                  className="md:w-24 w-20"
+                  className="md:w-24 w-20 h-auto"
                 />
               </div>
             </React.Fragment>

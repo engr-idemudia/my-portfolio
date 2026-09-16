@@ -23,9 +23,9 @@ const Footer = () => {
           <span className="text-purple">together?</span>
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          I am open to new opportunities across software engineering — backend, full-stack, and
-          security. Let&apos;s connect and explore how I can contribute to your
-          team.
+          I am open to new opportunities across software engineering — backend,
+          full-stack, and security. Let&apos;s connect and explore how I can
+          contribute to your team.
         </p>
         <a href="mailto:admin@idemudia.dev">
           <MagicButton
@@ -49,7 +49,13 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
             >
-              <Image src={info.img} alt="icons" width={20} height={20} />
+              <Image
+                src={info.img}
+                alt="icons"
+                width={20}
+                height={20}
+                className="h-5 w-5"
+              />
             </a>
           ))}
         </div>
