@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-card.png",
+        url: "/og-card-v2.png",
         width: 1200,
         height: 630,
         alt: "Idemudia M. Osaghae — Software Engineer",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "Idemudia M. Osaghae | Software Engineer — Full-Stack & Backend",
     description:
       "Software Engineer working across backend and full-stack development. Fintech and application security focus. Based in Tallinn, Estonia.",
-    images: ["/og-card.png"],
+    images: ["/og-card-v2.png"],
   },
 };
 
