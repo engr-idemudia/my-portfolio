@@ -1,4 +1,4 @@
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaLinkedin, FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
@@ -113,13 +113,14 @@ const Hero = () => {
               />
             </a>
             <a
-              href="/Idemudia_Osaghae_CV.pdf"
+              href="https://www.linkedin.com/in/engr-idemudia"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View Idemudia M. Osaghae on LinkedIn (opens in a new tab)"
             >
               <MagicButton
-                title="Download CV"
-                icon={<FaLocationArrow />}
+                title="View LinkedIn"
+                icon={<FaLinkedin />}
                 position="right"
               />
             </a>
