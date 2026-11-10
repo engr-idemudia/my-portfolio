@@ -221,12 +221,12 @@ export const companies = [
   },
 ];
 
-// Harmonised with the CV: Freelance → Swappie → Zazuu → Ministry of Defence.
+// Harmonised with the CV: Freelance → Swappie → Zazuu → Nigerian Army.
 export const workExperience = [
   {
     id: 1,
     title: "Freelance Software Engineer (2024–present)",
-    desc: "Design, build, and deploy full-stack web applications for clients, with a focus on performance, security, and maintainability. Integrate third-party REST APIs and payment gateways, apply secure authentication and input validation, and manage delivery end-to-end — requirements, sprint planning, testing, and deployment. Stack: Node.js, React, TypeScript, and Next.js.",
+    desc: "Design, build, and deploy full-stack web applications for clients, with a focus on performance, security, and maintainability. Integrate third-party REST APIs and payment gateways, apply secure authentication and input validation, and manage delivery end-to-end — requirements, sprint planning, testing, and deployment. Stack: TypeScript, Node.js, Next.js, and PostgreSQL.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
@@ -246,7 +246,8 @@ export const workExperience = [
   },
   {
     id: 4,
-    title: "IT Support & Systems Engineer – Ministry of Defence (2007–2019)",
+    title:
+      "IT Support & Systems Engineer (RADAR Systems) – Nigerian Army (2007–2019)",
     desc: "Maintained and monitored mission-critical RADAR and IT infrastructure, ensuring continuous operational availability. Diagnosed and resolved complex hardware and software faults to minimise downtime in high-stakes environments, performed system upgrades, security patching, and configuration management, and improved reliability through proactive monitoring and fault analysis.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
