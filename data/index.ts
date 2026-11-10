@@ -271,7 +271,7 @@ export const education = [
       "Estonian Entrepreneurship University of Applied Sciences (EUAS)",
     location: "Tallinn, Estonia",
     period: "2020 – 2023",
-    note: "Sole African graduate in the programme. Thesis on system architecture and application security.",
+    note: "One of 3 graduates from a cohort of about 30, and the only African graduate in the programme. Thesis on system architecture and application security.",
   },
   {
     id: 3,
@@ -295,7 +295,7 @@ export const education = [
 export const certifications = [
   {
     id: 1,
-    name: "Agile Development Crash Course",
+    name: "Intensive Agile Development Crash Course",
     issuer: "AS Proekspert, Tallinn",
     year: "2022",
     note: "One-week intensive bootcamp spanning software engineering, QA, DevOps, Scrum, and agile practices (Java, JavaScript, React, Jira, Jenkins, Git, Docker), culminating in a team-built application (Kudos App).",
@@ -327,14 +327,15 @@ export const certifications = [
 export const awards = [
   {
     id: 1,
-    title: "Sole African Graduate",
-    context: "EUAS — BSc Software Development & Entrepreneurship",
+    title: "One of 3 Graduates from a Cohort of About 30",
+    context:
+      "EUAS — BSc Software Development & Entrepreneurship (only African graduate)",
     year: "2023",
   },
   {
     id: 2,
     title: "Top 16 of 97",
-    context: "Intensive Agile Development Bootcamp — AS Proekspert",
+    context: "Intensive Agile Development Crash Course — AS Proekspert",
     year: "2022",
   },
   {
