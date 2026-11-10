@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 
 import "./globals.css";
 import { ThemeProvider } from "./provider";
@@ -71,6 +72,12 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        {/* Cloudflare Web Analytics — cookieless, privacy-friendly visit counts */}
+        <Script
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "d62c1b349da64228b48e63dcbe740686"}'
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
